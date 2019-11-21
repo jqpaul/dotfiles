@@ -1,0 +1,86 @@
+// vim:ts=4:sw=4:et
+{
+    // splith split container with 2 children
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1059,
+               "width": 1152,
+               "x": 0,
+               "y": 0
+            },
+            "name": "parse.go - go-bg - Code - OSS [Superuser]",
+            "percent": 0.7,
+            "swallows": [
+               {
+               // "class": "^code\\-oss$",
+               // "instance": "^code\\-oss$",
+               // "title": "^parse\\.go\\ \\-\\ go\\-bg\\ \\-\\ Code\\ \\-\\ OSS\\ \\[Superuser\\]$",
+               // "window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            // splitv split container with 2 children
+            "border": "none",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.3,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "none",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 364,
+                       "width": 644,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "root@mein: ~/go/src/github.com/user/go-bg",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       // "class": "^URxvt$",
+                       // "instance": "^urxvt$",
+                       // "title": "^root\\@mein\\:\\ \\~\\/go\\/src\\/github\\.com\\/user\\/go\\-bg$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "none",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 364,
+                       "width": 644,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "root@mein: ~",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       // "class": "^URxvt$",
+                       // "instance": "^urxvt$",
+                       // "title": "^root\\@mein\\:\\ \\~$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
