@@ -141,6 +141,7 @@ bindsym Mod1+F8 exec virtualbox
 bindsym Mod1+F9 exec dbeaver
 
 
+bindsym Mod1+F11 exec /home/joe/Programming/bin/bg.sh
 bindsym Mod1+F12 exec firefox --private-window
 
 
