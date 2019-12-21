@@ -67,9 +67,9 @@
 "mocp -k -10"
   Control+Shift + Left
 
-"/home/joe/Programming/bin/autostart.sh"
-  m:0x5 + c:33
-  Control+Shift+Mod5 + p
+#"/home/joe/Programming/bin/autostart.sh"
+#  m:0x5 + c:33
+#  Control+Shift+Mod5 + p
 
 # "systemctl suspend"
 #   m:0x5 + c:36
