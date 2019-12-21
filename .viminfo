@@ -1,0 +1,1147 @@
+# Diese viminfo-Datei wurde von Vim 8.1 generiert.
+# Sie können sie verändern, wenn Sie vorsichtig vorgehen!
+
+# Viminfo version
+|1,4
+
+# Wert von 'encoding', als diese Datei geschrieben wurde
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Letztes Suchmuster:
+~MSle0~/faux
+
+# Letzte ersetzte Zeichenkette:
+$
+
+# Befehlszeile Geschichte (neueste bis älteste):
+:wq
+|2,0,1576932883,,"wq"
+:w
+|2,0,1576932786,,"w"
+:e
+|2,0,1576932773,,"e"
+:q
+|2,0,1576922219,,"q"
+:e backup.sh
+|2,0,1576922198,,"e backup.sh"
+:vsp del.sh
+|2,0,1576922167,,"vsp del.sh"
+:q!
+|2,0,1576880254,,"q!"
+:s
+|2,0,1576880247,,"s"
+:Vex
+|2,0,1576878774,,"Vex"
+: ./__init__.py
+|2,0,1576878252,," ./__init__.py"
+:grep ./__init__.py
+|2,0,1576878244,,"grep ./__init__.py"
+:Q
+|2,0,1576878127,,"Q"
+:vertical resize 40
+|2,0,1576528321,,"vertical resize 40"
+:vertical resize 30
+|2,0,1576528307,,"vertical resize 30"
+:Vexplore
+|2,0,1576528296,,"Vexplore"
+:Vsplit
+|2,0,1576606851,,"Vsplit"
+:Vsp
+|2,0,1576606846,,"Vsp"
+:V
+|2,0,1576606842,,"V"
+:qa
+|2,0,1576606808,,"qa"
+:vst
+|2,0,1576606154,,"vst"
+:gt
+|2,0,1576528264,,"gt"
+:resize 40
+|2,0,1576528248,,"resize 40"
+:Sexplore
+|2,0,1576528135,,"Sexplore"
+:Explore
+|2,0,1576528109,,"Explore"
+:Helptags
+|2,0,1576523803,,"Helptags"
+:Plug
+|2,0,1576523691,,"Plug"
+:PlugClean
+|2,0,1576523282,,"PlugClean"
+:PlugInstall
+|2,0,1576523242,,"PlugInstall"
+:tabnew __init__.py
+|2,0,1576440126,,"tabnew __init__.py"
+:Pl
+|2,0,1576519973,,"Pl"
+:plug
+|2,0,1576441307,,"plug"
+:plu
+|2,0,1576441262,,"plu"
+:pl
+|2,0,1576441073,,"pl"
+:previous
+|2,0,1576441040,,"previous"
+:W
+|2,0,1575276404,,"W"
+:1,$d
+|2,0,1567251051,,"1,$d"
+:wq!
+|2,0,1565980689,,"wq!"
+:Wq
+|2,0,1565980683,,"Wq"
+
+# Suchausdruck Geschichte (neueste bis älteste):
+????
+|2,1,1576880245,63,"??"
+? @$
+|2,1,1576878791,,"@$"
+??\a
+|2,1,1576878766,63,"\\a"
+? \<main\>
+|2,1,1576878077,,"\\<main\\>"
+?/faux
+|2,1,1575277471,47,"faux"
+? \<Mod1ä\>
+|2,1,1573936567,,"\\<Mod1ä\\>"
+?/battery
+|2,1,1572696560,47,"battery"
+?//
+|2,1,1572696425,47,"/"
+?/battery_get_property
+|2,1,1572696408,47,"battery_get_property"
+?/b
+|2,1,1572696383,47,"b"
+?/font
+|2,1,1572457505,47,"font"
+?/opac
+|2,1,1572206882,47,"opac"
+
+# Ausdruck Geschichte (neueste bis älteste):
+
+# Eingabe-Zeile Geschichte (neueste bis älteste):
+@[{y(es)},n(o),a(ll),q(uit)] n
+|2,3,1576878190,,"[{y(es)},n(o),a(ll),q(uit)] n"
+
+# Debug-Zeile Geschichte (neueste bis älteste):
+
+# Register:
+"0	LINE	0
+	def main():
+	    print("test")
+	    os.listdir("/")
+	
+|3,0,0,1,4,0,1576878791,"def main():","    print(\"test\")","    os.listdir(\"/\")",""
+""1	LINE	0
+	
+|3,1,1,1,1,0,1576932734,""
+"2	LINE	0
+	/.*/
+|3,0,2,1,1,0,1576932719,"/.*/"
+"3	CHAR	0
+	/bg/
+	/Desktop/
+	/Documents/
+	/Downloads/
+	/Filme/
+	/Programming/
+	/Programs/
+	/Python/
+	d
+|3,0,3,0,9,0,1576932707,"/bg/","/Desktop/","/Documents/","/Downloads/","/Filme/","/Programming/","/Programs/","/Python/","d"
+"4	LINE	0
+	# sudo mount -t cifs //nas-main/home/ /mnt/nas -o username=root,password=
+|3,0,4,1,1,0,1576923031,"# sudo mount -t cifs //nas-main/home/ /mnt/nas -o username=root,password="
+"5	LINE	0
+	# sudo mount -t cifs //nas-main/cam/ /mnt/cam -o username=root,password=
+|3,0,5,1,1,0,1576923031,"# sudo mount -t cifs //nas-main/cam/ /mnt/cam -o username=root,password="
+"6	LINE	0
+	# sudo mount -t cifs //nas-main/Jonah/ /mnt/jonah -o username=jonah,password=polypen
+|3,0,6,1,1,0,1576923030,"# sudo mount -t cifs //nas-main/Jonah/ /mnt/jonah -o username=jonah,password=polypen"
+"7	LINE	0
+	import s
+|3,0,7,1,1,0,1576880478,"import s"
+"8	CHAR	0
+	def main():
+	    print("test")
+	    os.listdir("/")
+	
+	
+|3,0,8,0,5,0,1576879996,"def main():","    print(\"test\")","    os.listdir(\"/\")","",""
+"9	LINE	0
+	
+|3,0,9,1,1,0,1576878604,""
+"-	CHAR	0
+	o
+|3,0,36,0,1,0,1576880471,"o"
+
+# globale Variablen:
+
+# Datei-Markierungen:
+'0  5  9  ~/.gitignore
+|4,48,5,9,1576932883,"~/.gitignore"
+'1  2  3  ~/.gitignore
+|4,49,2,3,1576932664,"~/.gitignore"
+'2  10  3  ~/.gitignore
+|4,50,10,3,1576932664,"~/.gitignore"
+'3  7  0  ~/.xinitrc
+|4,51,7,0,1576923033,"~/.xinitrc"
+'4  1  0  ~/Programming/bin/del.sh
+|4,52,1,0,1576922219,"~/Programming/bin/del.sh"
+'5  1  0  ~/autostart.sh
+|4,53,1,0,1576922147,"~/autostart.sh"
+'6  2  4  ~/Documents/user/2019/december.txt
+|4,54,2,4,1576880993,"~/Documents/user/2019/december.txt"
+'7  1  0  ~/autostart.sh
+|4,55,1,0,1576880605,"~/autostart.sh"
+'8  1  0  ~/Programming/bin/autostart.sh
+|4,56,1,0,1576880592,"~/Programming/bin/autostart.sh"
+'9  1  0  ~/Programming/bin/autostart.sh
+|4,57,1,0,1576880592,"~/Programming/bin/autostart.sh"
+
+# Jumplist (neueste zuerst):
+-'  5  9  ~/.gitignore
+|4,39,5,9,1576932883,"~/.gitignore"
+-'  2  0  ~/.gitignore
+|4,39,2,0,1576932773,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1576932691,"~/.gitignore"
+-'  10  3  ~/.gitignore
+|4,39,10,3,1576932664,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1576932540,"~/.gitignore"
+-'  7  0  ~/.xinitrc
+|4,39,7,0,1576923033,"~/.xinitrc"
+-'  7  0  ~/.xinitrc
+|4,39,7,0,1576923033,"~/.xinitrc"
+-'  7  0  ~/.xinitrc
+|4,39,7,0,1576923033,"~/.xinitrc"
+-'  7  0  ~/.xinitrc
+|4,39,7,0,1576923033,"~/.xinitrc"
+-'  1  0  ~/.xinitrc
+|4,39,1,0,1576923005,"~/.xinitrc"
+-'  1  0  ~/.xinitrc
+|4,39,1,0,1576923005,"~/.xinitrc"
+-'  1  0  ~/.xinitrc
+|4,39,1,0,1576923005,"~/.xinitrc"
+-'  1  0  ~/.xinitrc
+|4,39,1,0,1576923005,"~/.xinitrc"
+-'  1  0  ~/Programming/bin/del.sh
+|4,39,1,0,1576922219,"~/Programming/bin/del.sh"
+-'  1  0  ~/Programming/bin/del.sh
+|4,39,1,0,1576922219,"~/Programming/bin/del.sh"
+-'  1  0  ~/Programming/bin/del.sh
+|4,39,1,0,1576922219,"~/Programming/bin/del.sh"
+-'  1  0  ~/Programming/bin/del.sh
+|4,39,1,0,1576922219,"~/Programming/bin/del.sh"
+-'  1  0  ~/Programming/bin/del.sh
+|4,39,1,0,1576922219,"~/Programming/bin/del.sh"
+-'  1  0  ~/Programming/bin/del.sh
+|4,39,1,0,1576922219,"~/Programming/bin/del.sh"
+-'  1  0  ~/Programming/bin/del.sh
+|4,39,1,0,1576922219,"~/Programming/bin/del.sh"
+-'  1  0  ~/Programming/bin/del.sh
+|4,39,1,0,1576922219,"~/Programming/bin/del.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576922167,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576922167,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576922167,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576922167,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576922167,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576922167,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576922167,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576922167,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576922147,"~/autostart.sh"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  2  4  ~/Documents/user/2019/december.txt
+|4,39,2,4,1576880993,"~/Documents/user/2019/december.txt"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/autostart.sh
+|4,39,1,0,1576880605,"~/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576880592,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576880592,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576880592,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576880592,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576880592,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576880592,"~/Programming/bin/autostart.sh"
+-'  1  0  ~/Programming/bin/autostart.sh
+|4,39,1,0,1576880592,"~/Programming/bin/autostart.sh"
+
+# Geschichte der Markierungen innerhalb von Dateien (neueste zuerst):
+
+> ~/.gitignore
+	*	1576932882	0
+	"	5	9
+	^	5	10
+	.	5	9
+	+	1	4
+	+	1	1
+	+	1	7
+	+	1	9
+	+	1	11
+	+	1	5
+	+	1	11
+	+	1	8
+	+	1	7
+	+	1	8
+	+	2	4
+	+	1	1
+	+	2	0
+	+	1	1
+	+	2	0
+	+	3	4
+	+	2	1
+	+	5	9
+
+> ~/.xinitrc
+	*	1576923032	0
+	"	7	0
+	^	10	7
+	.	7	0
+	+	1	12
+	+	5	11
+	+	2	39
+	+	4	31
+	+	4	48
+	+	3	23
+	+	4	31
+	+	6	16
+	+	4	0
+	+	7	0
+	+	7	74
+	+	5	10
+	+	9	55
+	+	7	82
+	+	7	70
+	+	7	0
+	+	8	0
+	+	7	43
+	+	9	1
+	+	7	1
+	+	5	1
+	+	6	0
+	+	11	0
+	+	7	0
+
+> ~/Programming/bin/del.sh
+	*	1576922218	0
+	"	1	0
+
+> ~/Programming/bin/autostart.sh
+	*	1576922217	0
+	"	1	0
+	^	7	9
+	.	7	8
+	+	7	12
+	+	15	85
+	+	11	12
+	+	17	116
+	+	31	116
+	+	45	116
+	+	24	6
+	+	38	6
+	+	6	8
+	+	22	8
+	+	36	8
+	+	45	110
+	+	50	21
+	+	50	13
+	+	50	0
+	+	51	0
+	+	23	31
+	+	37	4
+	+	51	12
+	+	63	13
+	+	59	6
+	+	49	1
+	+	51	1
+	+	53	1
+	+	3	25
+	+	25	8
+	+	27	9
+	+	40	0
+	+	42	0
+	+	39	0
+	+	41	0
+	+	42	0
+	+	37	43
+	+	13	8
+	+	11	8
+	+	9	8
+	+	7	8
+
+> ~/Programming/bin/backup.sh
+	*	1576922198	0
+	"	1	0
+	^	1	22
+	.	1	21
+	+	1	21
+
+> ~/autostart.sh
+	*	1576922145	0
+	"	1	0
+
+> ~/Documents/user/2019/december.txt
+	*	1576880992	0
+	"	2	4
+	^	1	3
+	.	1	0
+	+	2	8
+	+	2	13
+	+	3	0
+	+	1	0
+
+> ~/Programming/Python/pyvim/src/main.py
+	*	1576880502	0
+	"	2	0
+	^	1	0
+	.	1	0
+	+	1	0
+	+	10	10
+	+	9	0
+	+	4	0
+	+	1	0
+	+	4	0
+	+	1	0
+	+	1	2
+	+	4	0
+	+	1	9
+	+	4	16
+	+	4	0
+	+	11	0
+	+	4	0
+	+	4	5
+	+	4	0
+	+	2	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	1	0
+
+> /tmp/tutorgD8swa
+	*	1576880362	0
+	"	1	0
+
+> ~/Programming/Python/coinbase/src/connect.py
+	*	1576878788	0
+	"	1	0
+
+> ~/Programming/Python/pyvim/lib/python3.8/orig-prefix.txt
+	*	1576878770	0
+	"	1	0
+
+> ~/Programming/Python/pyvim/lib/python3.8/struct.py
+	*	1576878538	0
+	"	2	0
+
+> ~/Programming/Python/pyvim/src/__init__.py
+	*	1576878408	0
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/Programming/Python/snow/snow.py
+	*	1576696575	0
+	"	1	12
+	^	111	23
+	.	111	22
+	+	111	22
+
+> ~/Programming/bin/snow.sh
+	*	1576696424	0
+	"	19	25
+	^	19	26
+	.	19	24
+	+	41	3
+	+	3	0
+	+	40	13
+	+	15	0
+	+	14	32
+	+	15	23
+	+	18	35
+	+	26	40
+	+	32	0
+	+	19	24
+
+> ~/Python/lock/lock.sh
+	*	1576606943	0
+	"	1	0
+
+> ~/Python/lock/lock.py
+	*	1576606924	0
+	"	2	11
+
+> ~/.vim/bundle/vim-sensible/.github/FUNDING.yml
+	*	1576606185	0
+	"	2	0
+
+> ~/.vimrc
+	*	1576523672	0
+	"	3	24
+	^	3	25
+	.	3	24
+	+	1	0
+	+	1	25
+	+	3	24
+
+> ~/.vim/.vimrc
+	*	1576520061	0
+	"	2	29
+	^	2	30
+	.	2	29
+	+	1	33
+	+	3	14
+	+	2	0
+	+	3	0
+	+	2	29
+
+> ~/.vim/plug.vim
+	*	1576441003	0
+	"	2592	0
+	^	2592	0
+	.	2591	16
+	+	2591	16
+
+> ~/.xbindkeysrc
+	*	1576425425	0
+	"	70	0
+	^	70	1
+	.	70	0
+	+	58	35
+	+	62	0
+	+	61	0
+	+	61	38
+	+	48	11
+	+	49	14
+	+	53	11
+	+	54	20
+	+	72	16
+	+	73	0
+	+	72	0
+	+	71	0
+	+	70	0
+
+> ~/.zshrc
+	*	1576425376	0
+	"	84	34
+	^	72	33
+	.	72	32
+	+	2	0
+	+	5	20
+	+	6	23
+	+	102	24
+	+	105	16
+	+	103	29
+	+	72	32
+
+> ~/Programming/Python/tmp/t.py
+	*	1576363264	0
+	"	7	0
+	.	8	0
+	+	4	0
+	+	5	0
+	+	1	13
+	+	6	0
+	+	2	12
+	+	6	43
+	+	7	0
+	+	6	53
+	+	8	0
+
+> ~/Programming/Python/proc/src/julia.py
+	*	1576336914	0
+	"	33	51
+	^	39	10
+	.	39	9
+	+	39	9
+
+> /usr/bin/rm
+	*	1576180607	0
+	"	235	92
+
+> ~/.config/i3/config
+	*	1576093218	0
+	"	136	36
+	^	136	37
+	.	136	36
+	+	227	18
+	+	227	106
+	+	153	25
+	+	41	0
+	+	42	0
+	+	41	1
+	+	42	33
+	+	47	19
+	+	227	43
+	+	227	173
+	+	227	61
+	+	227	171
+	+	133	14
+	+	31	11
+	+	133	46
+	+	137	25
+	+	133	27
+	+	137	26
+	+	145	0
+	+	146	0
+	+	145	15
+	+	134	46
+	+	135	31
+	+	143	0
+	+	138	0
+	+	143	0
+	+	138	23
+	+	137	0
+	+	136	14
+	+	139	28
+	+	140	31
+	+	142	0
+	+	141	27
+	+	144	52
+	+	136	36
+
+> ~/rain.sh
+	*	1575824266	0
+	"	31	3
+	^	31	4
+	.	128	3
+	+	128	3
+
+> ~/bg/src/bg.py
+	*	1575671463	0
+	"	7	0
+	^	7	0
+	.	7	0
+	+	8	1
+	+	7	0
+
+> /Drive/laptop/joe/bg/src/bg.py
+	*	1575671444	0
+	"	10	0
+	^	2	1
+	.	2	0
+	+	1	0
+	+	3	2
+	+	2	0
+
+> /tmp/crontab.o7sPvl
+	*	1575503403	0
+	"	1	0
+
+> ~/Programming/bin/bg.sh
+	*	1575481549	0
+	"	4	0
+	^	4	0
+	.	3	0
+	+	4	30
+	+	3	0
+	+	1	1
+	+	3	0
+
+> /etc/openvpn/client/mullvad_de.conf
+	*	1575381577	0
+	"	32	0
+	^	30	23
+	.	30	22
+	+	29	34
+	+	30	22
+
+> ~/Downloads/tmp/mullvad_config_linux_de/mullvad_userpass.txt
+	*	1575381291	0
+	"	1	0
+
+> ~/Programming/Python/aoc/day1/1.py
+	*	1575316142	0
+	"	12	18
+
+> ~/Programming/Python/aoc/day1/2.py
+	*	1575305021	0
+	"	25	0
+	^	23	22
+	.	23	22
+	+	3	0
+	+	17	0
+	+	7	15
+	+	11	0
+	+	3	0
+	+	4	10
+	+	5	31
+	+	11	22
+	+	13	0
+	+	12	16
+	+	16	13
+	+	15	26
+	+	18	0
+	+	20	16
+	+	9	13
+	+	11	19
+	+	20	26
+	+	23	12
+	+	19	9
+	+	23	37
+	+	24	11
+	+	23	22
+
+> ~/Programming/Python/aoc/day1/vals2.txt
+	*	1575304326	0
+	"	100	4
+	^	100	5
+	.	101	0
+	+	101	0
+
+> ~/.config/alacritty/alacritty.yml
+	*	1575277680	0
+	"	95	0
+	^	87	4
+	.	87	3
+	+	139	9
+	+	281	22
+	+	99	11
+	+	139	8
+	+	87	3
+
+> ~/Programming/Python/aoc/1.py
+	*	1575276501	0
+	"	13	10
+	^	13	10
+	.	13	9
+	+	5	14
+	+	13	34
+	+	13	0
+	+	5	25
+	+	7	21
+	+	10	19
+	+	11	15
+	+	7	21
+	+	8	7
+	+	12	18
+	+	9	17
+	+	13	0
+	+	4	0
+	+	5	0
+	+	3	13
+	+	4	3
+	+	13	0
+	+	13	9
+
+> ~/Programming/Python/aoc/vals.txt
+	*	1575276238	0
+	"	100	4
+	^	100	5
+	.	101	0
+	+	101	0
+
+> ~/.conky/conky/conky.conf
+	*	1575215329	0
+	"	87	20
+	^	87	21
+	.	87	20
+	+	83	0
+	+	85	0
+	+	86	0
+	+	88	0
+	+	89	0
+	+	90	0
+	+	91	0
+	+	92	0
+	+	85	16
+	+	86	16
+	+	89	16
+	+	88	16
+	+	89	16
+	+	90	16
+	+	91	16
+	+	92	16
+	+	93	17
+	+	85	16
+	+	86	17
+	+	88	17
+	+	89	17
+	+	90	17
+	+	91	17
+	+	92	17
+	+	93	18
+	+	85	24
+	+	86	28
+	+	88	22
+	+	89	20
+	+	90	24
+	+	91	27
+	+	92	24
+	+	93	33
+	+	69	0
+	+	71	0
+	+	72	0
+	+	86	29
+	+	87	0
+	+	88	0
+	+	87	20
+
+> ~/.git/COMMIT_EDITMSG
+	*	1574592845	0
+	"	1	0
+
+> ~/.zprofile
+	*	1574347067	0
+	"	4	17
+	^	4	18
+	.	4	18
+	+	1	50
+	+	4	18
+
+> ~/.config/layouts/layout-workspace1.json
+	*	1572974957	0
+	"	117	0
+
+> ~/.config/layouts/layout-workspace2.json
+	*	1572974020	0
+	"	69	27
+	^	69	28
+	.	69	27
+	+	50	27
+	+	69	27
+
+> ~/.config/layouts/layout-workspace3.json
+	*	1572973998	0
+	"	69	27
+	^	69	28
+	.	69	27
+	+	50	27
+	+	69	27
+
+> /usr/src/hid-xpadneo-0.6.0/src/hid-xpadneo.c
+	*	1572711986	0
+	"	1385	8
+
+> /etc/modprobe.d/99-xpadneo-bluetooth.conf
+	*	1572632447	0
+	"	1	31
+
+> ~/.config/nnn/plugins/viuimg
+	*	1572348303	0
+	"	1	0
+
+> ~/.config/nnn/plugins/imgur
+	*	1572311045	0
+	"	222	0
+
+> ~/fstab
+	*	1572300704	0
+	"	1	0
+
+> ~/Programming/bin/sound.sh
+	*	1572281144	0
+	"	11	17
+	^	11	18
+	.	11	17
+	+	7	27
+	+	5	40
+	+	11	17
+
+> ~/.local/share/pikaur/aur_repos/zfs-dkms/PKGBUILD
+	*	1572047981	0
+	"	1	0
+
+> ~/Programming/bin/mount.sh
+	*	1571769161	0
+	"	2	69
+	^	2	70
+	.	2	70
+	+	1	77
+	+	2	0
+	+	3	0
+	+	2	32
+	+	3	33
+	+	2	42
+	+	3	43
+	+	2	59
+	+	3	71
+	+	2	70
+
+> ~/Programming/Rust/std/rust/config.toml
+	*	1571525196	0
+	"	294	11
+	^	294	12
+	.	294	11
+	+	30	16
+	+	293	17
+	+	294	11
+
+> /etc/openvpn/client/openvpn.conf
+	*	1571336048	0
+	"	2	12
+	^	2	13
+	.	2	12
+	+	2	12
+
+> /etc/openvpn/client/auth-user-pass.txt
+	*	1571334308	0
+	"	2	9
+	^	2	10
+	.	2	9
+	+	2	9
+
+> /etc/openvpn/client/openvpn.ovpn
+	*	1571334281	0
+	"	29	4
+	^	27	24
+	.	29	0
+	+	5	52
+	+	25	3
+	+	26	0
+	+	25	22
+	+	27	0
+	+	29	0
+
+> ~/Programming/bin/download.sh
+	*	1569967451	0
+	"	1	88
+	^	1	89
+	.	1	88
+	+	1	126
+	+	1	88
+
+> ~/.config/mopidy/mopidy.conf
+	*	1569951443	0
+	"	132	23
+	^	132	24
+	.	132	23
+	+	130	0
+	+	131	0
+	+	132	0
+	+	47	0
+	+	48	0
+	+	131	20
+	+	132	23
+
+> ~/.mozilla/firefox/z4x3py37.dev-edition-default/chrome/userChrome.css
+	*	1568824215	0
+	"	1	48
+	^	1	46
+	.	1	48
+	+	1	48
+
+> ~/.config/i3/workspace2.json
+	*	1567252950	0
+	"	31	17
+
+> /etc/fstab
+	*	1565980694	0
+	"	13	0
+	^	13	0
+	.	12	53
+	+	12	53
+
+> ~/.config/compton/compton.conf
+	*	1565974173	0
+	"	231	13
+	^	231	14
+	.	141	13
+	+	141	13
+
+> ~/.Xdefaults
+	*	1565541384	0
+	"	25	0
+	.	26	0
+	+	23	19
+	+	25	42
+	+	26	23
+	+	26	0
+	+	20	0
+	+	21	0
+	+	26	0
+
+> ~/.Xresources
+	*	1565541373	0
+	"	41	0
+
+> ~/spotdl/auto.txt
+	*	1564308825	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Downloads/openvpn2.ovpn
+	*	1564256730	0
+	"	5	33
+	^	5	34
+	.	5	33
+	+	29	5
+	+	31	11
+	+	33	10
+	+	5	33
+
+> ~/Downloads/auth-user-pass.txt
+	*	1564256700	0
+	"	2	9
+	^	2	10
+	.	2	9
+	+	2	9
+
+> ~/.local/share/Steam/steam.sh:
+	*	1564256380	0
+	"	1	0
+
+> ~/.config/openvpn/openvpn.ovpn
+	*	1564255807	0
+	"	5	32
+	^	5	33
+	.	5	32
+	+	5	32
+
+> /mnt/usb/root-dotfiles/.xinitrc
+	*	1564255001	0
+	"	8	38
+
+> /mnt/usb/packages.txt
+	*	1564253943	0
+	"	1126	0
+
+> ~/.mozilla/firefox/ll44n62j.default-release/chrome/userChrome.css
+	*	1564252620	0
+	"	16	0
+	^	16	1
+	.	16	0
+	+	16	0
+
+> /etc/pacman.d/mirrorlist
+	*	1564248763	0
+	"	1	0
