@@ -1,6 +1,6 @@
 setxkbmap de
 redshift -l 52.382:9.736 -t 4500:3000 &
-xbindkeys -f /home/joe/.xbindkeysrc &
+xbindkeys -f /home/joe/.xbindkeysrc
 compton --config ~/.config/compton/compton.conf &
 xset s off
 export DISPLAY=:0

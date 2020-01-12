@@ -37,8 +37,6 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-# Examples of commands:
-
 # lock screen
 # "i3lock-fancy"
 "/home/joe/Python/lock/lock.sh"

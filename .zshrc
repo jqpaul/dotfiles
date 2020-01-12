@@ -104,3 +104,5 @@ alias pacman="sudo pacman"
 alias code="code --disable-gpu"
 export PRG="/home/joe/Programming"
 export EDITOR=vim
+
+source /home/joe/.config/broot/launcher/bash/br
