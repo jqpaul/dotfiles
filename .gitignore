@@ -3,3 +3,6 @@
 *.log
 .git-credentials
 .gitconfig
+.gehbg
+.viminfo
+.wpm.csv
