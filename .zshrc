@@ -102,6 +102,9 @@ source $ZSH/oh-my-zsh.sh
 alias sus="systemctl suspend"
 alias pacman="sudo pacman"
 alias code="code --disable-gpu"
+alias vim="/usr/bin/nvim"
+alias oldvim="/usr/bin/vim"
+
 export PRG="/home/joe/Programming"
 export EDITOR=vim
 

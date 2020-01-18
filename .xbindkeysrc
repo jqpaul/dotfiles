@@ -43,6 +43,11 @@
   m:0x5 + c:65
   Control+Shift + space
 
+# screensaver
+"xscreensaver-command -lock"
+  m:0x5 + c:36
+  Control+Shift + Return
+
 # "mocp -f"
 "playerctl next"
   m:0x5 + c:57

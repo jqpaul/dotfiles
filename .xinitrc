@@ -6,5 +6,7 @@ xset s off
 export DISPLAY=:0
 python /home/joe/bg/src/bg.py &
 conky --config=/home/joe/.conky/conky/conky.conf &
+xscreensaver &
 # sudo openvpn --config /etc/openvpn/client/openvpn.ovpn &
+sh ~/Programming/bin/mount.sh
 exec i3
