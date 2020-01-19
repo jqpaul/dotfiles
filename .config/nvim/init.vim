@@ -11,13 +11,16 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'cespare/vim-toml'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 colorscheme murphy
 
 set relativenumber
 set guifont=Monaco:h20
+set mouse=a
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
