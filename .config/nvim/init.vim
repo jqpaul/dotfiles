@@ -4,7 +4,6 @@ Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'ncm2/ncm2'
-Plug 'tpope/vim-surround'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
@@ -16,13 +15,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'cespare/vim-toml'
 Plug 'altercation/vim-colors-solarized'
 Plug 'rust-lang/rust.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 let g:solarized_termcolors=256
 colorscheme solarized
 
-set relativenumber
-set guifont=Monaco:h20
+set number relativenumber
+set colorcolumn=80
+set guifont=Monaco
 set mouse=a
 
 autocmd StdinReadPre * let s:std_in=1
@@ -42,6 +44,9 @@ set hidden
 "    \ }
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+
+inoremap { {}<Esc>i
+inoremap <C-Return> <Return><Esc>ko
 
 noremap <C-Tab> :<C-U>tabnext<CR>
 inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
