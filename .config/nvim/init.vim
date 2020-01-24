@@ -7,6 +7,7 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-neosnippet'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -17,8 +18,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'rust-lang/rust.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-fugitive'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 call plug#end()
 
 let g:solarized_termcolors=256
@@ -48,6 +49,8 @@ ino {<CR> {<CR>}<ESC>O
 ino (<CR> (<CR>)<ESC>O
 ino [<CR> [<CR>]<ESC>O
 
+ino <M-y> <lt>
+
 noremap <C-Tab> :<C-U>tabnext<CR>
 inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
 cnoremap <C-Tab> <C-C>:tabnext<CR>
@@ -63,6 +66,8 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+
 let g:ale_completion_enabled = 1
 let g:ale_linters = {'rust': ['rls']}
 let g:ale_fixers = {
@@ -72,6 +77,5 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:deoplete#enable_at_startup = 1
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-tab>'
+let g:comfortable_motion_scroll_down_key = "j"
+let g:comfortable_motion_scroll_up_key = "k"
