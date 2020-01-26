@@ -20,7 +20,10 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/unite.vim'
 call plug#end()
+
+call togglebg#map("<F5>")
 
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -32,7 +35,6 @@ set mouse=a
 set completeopt=noinsert,menuone,noselect
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd BufEnter * call ncm2#enable_for_buffer()
 
 map <C-n> :NERDTreeToggle<CR>
@@ -40,23 +42,13 @@ map gm :call cursor(0, virtcol('$')/2)<CR>
 
 set hidden
 
-" ino ' ''<left>
-" ino " ""<left>
-" ino { {}<left>
-" ino ( ()<left>
-" ino [ []<left>
 ino {<CR> {<CR>}<ESC>O
 ino (<CR> (<CR>)<ESC>O
 ino [<CR> [<CR>]<ESC>O
 
-ino <M-y> <lt>
-
-noremap <C-Tab> :<C-U>tabnext<CR>
-inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
-cnoremap <C-Tab> <C-C>:tabnext<CR>
-noremap <C-S-Tab> :<C-U>tabprevious<CR>
-inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
-cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
+map <C-y> :bNext<CR>
+map <C-x> :bprevious<CR>
+map <C-p> :Files<CR>
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -66,7 +58,7 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
 
 let g:ale_completion_enabled = 1
 let g:ale_linters = {'rust': ['rls']}
