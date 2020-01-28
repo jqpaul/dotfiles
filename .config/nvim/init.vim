@@ -21,6 +21,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/unite.vim'
+Plug 'maxbrunsfeld/vim-yankstack'
 call plug#end()
 
 call togglebg#map("<F5>")
@@ -33,14 +34,13 @@ set colorcolumn=80
 set guifont=Monaco
 set mouse=a
 set completeopt=noinsert,menuone,noselect
+set hidden
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd BufEnter * call ncm2#enable_for_buffer()
 
 map <C-n> :NERDTreeToggle<CR>
 map gm :call cursor(0, virtcol('$')/2)<CR>
-
-set hidden
 
 ino {<CR> {<CR>}<ESC>O
 ino (<CR> (<CR>)<ESC>O
@@ -69,6 +69,3 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:deoplete#enable_at_startup = 1
-
-let g:comfortable_motion_scroll_down_key = "j"
-let g:comfortable_motion_scroll_up_key = "k"
