@@ -41,9 +41,8 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 
 map <C-n> :NERDTreeToggle<CR>
 map gm :call cursor(0, virtcol('$')/2)<CR>
+map <F9> :e $HOME/.config/nvim/init.vim<CR>
 
-ino {<CR> {<CR>}<ESC>O
-ino (<CR> (<CR>)<ESC>O
 ino [<CR> [<CR>]<ESC>O
 
 map <C-y> <ESC>:bNext<CR>

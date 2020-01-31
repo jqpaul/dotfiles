@@ -139,8 +139,8 @@ bindsym Mod1+F6 exec pac
 bindsym Mod1+F7 exec multimc
 bindsym Mod1+F8 exec virtualbox
 bindsym Mod1+F9 exec dbeaver
-bindsym Mod1+F10 exec emacs
-bindsym Mod1+F11 exec gvim
+bindsym Mod1+F10 exec vlc
+bindsym Mod1+F11 exec zeal
 bindsym Mod1+F12 exec firefox --private-window
 
 
