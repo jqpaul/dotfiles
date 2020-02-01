@@ -3,8 +3,8 @@ Plug 'pearofducks/ansible-vim'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
-Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-neosnippet'
@@ -45,14 +45,20 @@ map <F9> :e $HOME/.config/nvim/init.vim<CR>
 
 ino [<CR> [<CR>]<ESC>O
 
-map <C-y> <ESC>:bNext<CR>
-map <C-x> <ESC>:bprevious<CR>
+map <C-y> <ESC>:bn<CR>
+map <C-x> <ESC>:bp<CR>
 map <C-a> <ESC>:Files<CR>
 map <C-s> <ESC>:w<CR>
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+nnoremap <C-Down> :m .+1<CR>==
+nnoremap <C-Up> :m .-2<CR>==
+inoremap <C-Down> <Esc>:m .+1<CR>==gi
+inoremap <C-Up> <Esc>:m .-2<CR>==gi
+vnoremap <C-Down> :m '>+1<CR>gv=gv
+vnoremap <C-Up> :m '<-2<CR>gv=gv
 
+noremap + :s/^/\/\//<CR>
+noremap - :s/^\/\///<CR>
 noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
