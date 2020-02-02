@@ -108,5 +108,6 @@ alias oldvim="/usr/bin/vim"
 export PRG="/home/joe/Programming"
 export EDITOR=vim
 export NNN_PLUG='v:imgviu;t:imgthumb'
+export PATH=$PATH:~/.cargo/bin
 
 source /home/joe/.config/broot/launcher/bash/br

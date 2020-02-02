@@ -44,11 +44,14 @@ map gm :call cursor(0, virtcol('$')/2)<CR>
 map <F9> :e $HOME/.config/nvim/init.vim<CR>
 
 ino [<CR> [<CR>]<ESC>O
+ino {<CR> {<CR>}<ESC>O
+ino (<CR> (<CR>)<ESC>O
 
 map <C-y> <ESC>:bn<CR>
 map <C-x> <ESC>:bp<CR>
 map <C-a> <ESC>:Files<CR>
 map <C-s> <ESC>:w<CR>
+map <C-q> <ESC>:ter<CR>
 
 nnoremap <C-Down> :m .+1<CR>==
 nnoremap <C-Up> :m .-2<CR>==
