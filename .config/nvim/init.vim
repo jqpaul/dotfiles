@@ -60,6 +60,8 @@ inoremap <C-Up> <Esc>:m .-2<CR>==gi
 vnoremap <C-Down> :m '>+1<CR>gv=gv
 vnoremap <C-Up> :m '<-2<CR>gv=gv
 
+tnoremap <Esc> <C-\><C-n>
+
 noremap + :s/^/\/\//<CR>
 noremap - :s/^\/\///<CR>
 noremap <Up> <nop>
