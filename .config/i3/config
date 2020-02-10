@@ -40,6 +40,7 @@ floating_modifier Mod1
 # start a terminal
 # bindsym Mod1+Return exec i3-sensible-terminal
 bindsym Mod1+Return exec alacritty
+# bindsym Mod1+Return exec urxvt
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -143,8 +144,7 @@ bindsym Mod1+F10 exec vlc
 bindsym Mod1+F11 exec zeal
 bindsym Mod1+F12 exec firefox --private-window
 
-
-
+bindsym Mod1+Q exec deepin-screenshot
 
 bindsym Mod4+Control+Left workspace prev
 bindsym Mod4+Control+Right workspace next
@@ -225,6 +225,8 @@ bar {
 	tray_output none
 			status_command bumblebee-status -m network_traffic spotify pasource memory cpu date time -p root.path=/ time.format="%H:%M:%S Uhr" date.format="%a, %d-%m-%Y" -t greyish-powerline
 }
+
+exec_always ~/.fehbg
 
 # gaps inner 1
 # gaps outer 0

@@ -73,6 +73,7 @@ plugins=(zsh-autosuggestions)
 
 
 source $ZSH/oh-my-zsh.sh
+source ~/Documents/zsh/zsh-vim-mode.plugin.zsh
 
 # User configuration
 
@@ -106,7 +107,7 @@ alias vim="/usr/bin/nvim"
 alias oldvim="/usr/bin/vim"
 
 export PRG="/home/joe/Programming"
-export EDITOR=vim
+export EDITOR=nvim
 export NNN_PLUG='v:imgviu;t:imgthumb'
 export PATH=$PATH:~/.cargo/bin
 

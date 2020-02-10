@@ -9,9 +9,9 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-neosnippet'
 Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+			\ 'branch': 'next',
+			\ 'do': 'bash install.sh',
+			\ }
 Plug 'junegunn/fzf.vim'
 Plug 'cespare/vim-toml'
 Plug 'altercation/vim-colors-solarized'
@@ -22,6 +22,10 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/unite.vim'
 Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'lervag/vimtex'
+Plug 'plasticboy/vim-markdown'
+Plug 'vimwiki/vimwiki'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 call togglebg#map("<F5>")
@@ -35,23 +39,37 @@ set guifont=Monaco
 set mouse=a
 set completeopt=noinsert,menuone,noselect
 set hidden
+set nocompatible
+set ignorecase
+set so=7
+filetype plugin on
+syntax on
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd BufEnter * call ncm2#enable_for_buffer()
 
 map <C-n> :NERDTreeToggle<CR>
-map gm :call cursor(0, virtcol('$')/2)<CR>
-map <F9> :e $HOME/.config/nvim/init.vim<CR>
+map <F9> :e $MYVIMRC<CR>
+map <F10> :so $MYVIMRC<CR>
+map Q <Nop>
+map ' `
 
 ino [<CR> [<CR>]<ESC>O
 ino {<CR> {<CR>}<ESC>O
 ino (<CR> (<CR>)<ESC>O
 
-map <C-y> <ESC>:bn<CR>
-map <C-x> <ESC>:bp<CR>
-map <C-a> <ESC>:Files<CR>
+" map <C-y> <ESC>:bn<CR>
+" map <C-x> <ESC>:bp<CR>
+
 map <C-s> <ESC>:w<CR>
 map <C-q> <ESC>:ter<CR>
+
+" map <C-e> <ESC>:wq<CR>
+" map <C-S-e> <ESC>:q!<CR>
+
+nnoremap <C-a> <ESC>:Files<CR>
+inoremap <C-a> <ESC>0i
+inoremap <C-e> <ESC>$a
 
 nnoremap <C-Down> :m .+1<CR>==
 nnoremap <C-Up> :m .-2<CR>==
@@ -69,13 +87,20 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
+imap <C-Space> <Plug>(neosnippet_expand_or_jump)
+smap <C-Space> <Plug>(neosnippet_expand_or_jump)
 
 let g:ale_completion_enabled = 1
 let g:ale_linters = {'rust': ['rls']}
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'rust': ['rustfmt'],
-\}
+			\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+			\   'rust': ['rustfmt'],
+			\}
 let g:ale_fix_on_save = 1
 let g:deoplete#enable_at_startup = 1
+
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
