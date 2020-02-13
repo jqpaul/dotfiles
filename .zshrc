@@ -105,6 +105,8 @@ alias pacman="sudo pacman"
 alias code="code --disable-gpu"
 alias vim="/usr/bin/nvim"
 alias oldvim="/usr/bin/vim"
+alias ll="exa -l"
+alias l="exa -al"
 
 export PRG="/home/joe/Programming"
 export EDITOR=nvim

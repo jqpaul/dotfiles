@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'pearofducks/ansible-vim'
 Plug 'preservim/nerdtree'
-Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
@@ -26,10 +25,14 @@ Plug 'lervag/vimtex'
 Plug 'plasticboy/vim-markdown'
 Plug 'vimwiki/vimwiki'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 call togglebg#map("<F5>")
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_section_z = '%{strftime("%c")}'
 let g:solarized_termcolors=256
 colorscheme solarized
 
@@ -50,7 +53,6 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 
 map <C-n> :NERDTreeToggle<CR>
 map <F9> :e $MYVIMRC<CR>
-map <F10> :so $MYVIMRC<CR>
 map Q <Nop>
 map ' `
 
@@ -58,18 +60,15 @@ ino [<CR> [<CR>]<ESC>O
 ino {<CR> {<CR>}<ESC>O
 ino (<CR> (<CR>)<ESC>O
 
-" map <C-y> <ESC>:bn<CR>
-" map <C-x> <ESC>:bp<CR>
+map <C-x> <ESC>:bn<CR>
+map <C-y> <ESC>:bp<CR>
 
-map <C-s> <ESC>:w<CR>
 map <C-q> <ESC>:ter<CR>
-
-" map <C-e> <ESC>:wq<CR>
-" map <C-S-e> <ESC>:q!<CR>
+map <C-m> <ESC>:ALEGoToDefinition<CR>
 
 nnoremap <C-a> <ESC>:Files<CR>
 inoremap <C-a> <ESC>0i
-inoremap <C-e> <ESC>$a
+inoremap <C-d> <ESC>$a
 
 nnoremap <C-Down> :m .+1<CR>==
 nnoremap <C-Up> :m .-2<CR>==
