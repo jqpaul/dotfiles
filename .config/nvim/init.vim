@@ -15,7 +15,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'cespare/vim-toml'
 Plug 'altercation/vim-colors-solarized'
 Plug 'rust-lang/rust.vim'
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
@@ -26,6 +26,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'vimwiki/vimwiki'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 call togglebg#map("<F5>")
@@ -56,12 +57,14 @@ map <F9> :e $MYVIMRC<CR>
 map Q <Nop>
 map ' `
 
+nmap <F8> :TagbarToggle<CR>
+
+map <C-x> <ESC>:bn<CR>
+map <C-z> <ESC>:bp<CR>
+
 ino [<CR> [<CR>]<ESC>O
 ino {<CR> {<CR>}<ESC>O
 ino (<CR> (<CR>)<ESC>O
-
-map <C-x> <ESC>:bn<CR>
-map <C-y> <ESC>:bp<CR>
 
 map <C-q> <ESC>:ter<CR>
 map <C-m> <ESC>:ALEGoToDefinition<CR>
@@ -97,6 +100,9 @@ let g:ale_fixers = {
 			\}
 let g:ale_fix_on_save = 1
 let g:deoplete#enable_at_startup = 1
+
+let g:LanguageClient_diagnosticsSignsMax = 0
+" let g:LanguageClient_serverCommands =  {'rust': ['rls'],}
 
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'

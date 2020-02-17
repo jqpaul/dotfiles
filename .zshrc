@@ -73,7 +73,7 @@ plugins=(zsh-autosuggestions)
 
 
 source $ZSH/oh-my-zsh.sh
-source ~/Documents/zsh/zsh-vim-mode.plugin.zsh
+# source ~/Documents/zsh/zsh-vim-mode.plugin.zsh
 
 # User configuration
 
