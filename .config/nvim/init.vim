@@ -26,6 +26,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'vimwiki/vimwiki'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
 call plug#end()
 
@@ -33,6 +34,7 @@ call togglebg#map("<F5>")
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_powerline_fonts = 1
 let g:airline_section_z = '%{strftime("%c")}'
 let g:solarized_termcolors=256
 colorscheme solarized
