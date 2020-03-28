@@ -36,6 +36,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
 let g:airline_section_z = '%{strftime("%c")}'
+let g:airline_theme='dark'
 let g:solarized_termcolors=256
 colorscheme solarized
 
@@ -48,6 +49,7 @@ set hidden
 set nocompatible
 set ignorecase
 set so=7
+set inccommand=split
 filetype plugin on
 syntax on
 

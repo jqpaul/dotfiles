@@ -36,7 +36,8 @@
 
 
 # "i3lock-fancy"
-"/home/joe/Python/lock/lock.sh"
+# "/home/joe/Python/lock/lock.sh"
+"/home/joe/Programming/Python/lock/lock.sh"
     m:0x5 + c:65
     Control+Shift + space 
 
