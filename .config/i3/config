@@ -1,4 +1,4 @@
-# i3 config file (v4)
+
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
@@ -39,8 +39,8 @@ floating_modifier Mod1
 
 # start a terminal
 # bindsym Mod1+Return exec i3-sensible-terminal
-bindsym Mod1+Return exec urxvt
-bindsym Mod1+Shift+Return exec alacritty
+bindsym Mod1+Return exec alacritty
+bindsym Mod1+Shift+Return exec urxvt
 # bindsym Mod1+Return exec urxvt
 
 # kill focused window
@@ -49,7 +49,7 @@ bindsym Mod1+Shift+q kill
 bindsym Mod4+Shift+q [class=”.*”] kill
 
 # start dmenu (a program launcher)
-bindsym Mod1+d exec dmenu_run
+bindsym Mod1+d exec --no-startup-id dmenu_run -l 20
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -129,7 +129,6 @@ set $ws10 "10"
 # cycle between workspaces
 bindsym Mod1+ö workspace prev
 bindsym Mod1+ä workspace next
-
 
 # Keybindings for Applications
 bindsym Mod1+F1 exec spotify
@@ -224,7 +223,7 @@ bar {
 	font pango:Inconsolata 10
 	position bottom
 	tray_output none
-			status_command bumblebee-status -m network_traffic spotify pasource memory cpu date time -p root.path=/ time.format="%H:%M:%S Uhr" date.format="%a, %d-%m-%Y" -t greyish-powerline
+			status_command bumblebee-status -m network_traffic getcrypto spotify pasource memory cpu date time -p root.path=/ time.format="%H:%M:%S Uhr" date.format="%a, %d-%m-%Y" -t greyish-powerline
 }
 
 exec_always ~/.fehbg
