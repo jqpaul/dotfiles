@@ -1,0 +1,51 @@
+Config
+   { font = "xft:DejaVuSansMono:size=12"
+   , additionalFonts = []        -- default: []
+   , borderColor = "white"
+   , border = NoBorder
+   , bgColor = "#341616"
+   , fgColor = "white"
+   , alpha = 255                 -- default: 255
+   , position = BottomSize C 100 26
+   , textOffset = -1             -- default: -1
+   , iconOffset = -1             -- default: -1
+   , lowerOnStart = True
+   , pickBroadest = False        -- default: False
+   , persistent = True
+   , hideOnStart = False
+   , iconRoot = "/home/joea/.xmonad/resources"  -- default: "."
+   , allDesktops = True          -- default: True
+   , overrideRedirect = False    -- default: True
+   , commands =
+      [ Run CoreTemp
+         [ "-t", "<icon=thermometer-icon_24.xpm/><core0>°C"
+         , "-H", "60", "-h", "red"
+         , "-L", "40", "-l", "#ff963f"
+         , "-n", "#ff96ef"
+         ] 50
+      , Run Cpu
+         [ "-t", "<icon=gnome_cpu_24.xpm/> <total>%"
+         , "-p", "3"
+         , "-H", "50", "-h", "red"
+         , "-L", "3", "-l", "#ff963f"
+         , "-n", "#ff963f"
+         ] 10
+      , Run Date "<fc=#ee9a00>%a %0d-%m-%Y %H:%M:%S</fc>" "date" 10
+      , Run Com "bash" ["-c", "~/.xmonad/resources/spotify.sh"] "" 10
+      , Run Com "uname" ["-s","-r"] "" 0
+      , Run DynNetwork
+         [ "-t", "<icon=network-icon_24.xpm/> <icon=actions-arrow-down-icon_24.xpm/><rx>KB <icon=actions-arrow-up-icon_24.xpm/><tx>KB"
+         , "-p", "3"
+         , "-H", "650000", "-h", "red"
+         , "-L", "250000"
+	 , "-n", "#ffbc31"
+         ] 10
+      , Run Memory
+         [ "-t", "<fc=#ff963F><icon=memory-icon_24.xpm/> <usedratio>% used - <available>M free</fc>"] 10
+      , Run UnsafeStdinReader
+      ]
+   , sepChar = "%"
+   , alignSep = "}{"
+
+   , template = "%UnsafeStdinReader% } %date% { %bash% | %cpu% | %coretemp% | %memory% | %dynnetwork%"
+   }
