@@ -9,12 +9,16 @@ import XMonad.StackSet as W
 import System.IO
 import System.Exit
 
+xmonadStartupHook = do
+    spawn "sh /home/joe/Programming/bin/bg.sh 13"
+
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/joe/.xmonad/xmobar"
     xmonad $ def {
 	manageHook = manageDocks <+> manageHook def,
 	layoutHook = avoidStruts  $  layoutHook def,
 	handleEventHook = handleEventHook def <+> docksEventHook,
+	startupHook = xmonadStartupHook,
 	logHook = dynamicLogWithPP xmobarPP
 		{ ppOutput = hPutStrLn xmproc,
 		  ppTitle = xmobarColor "green" "" . shorten 50
@@ -31,7 +35,7 @@ main = do
 	  ((mod1Mask, xK_F3), spawn "pavucontrol"),
 	  ((mod1Mask, xK_F4), spawn "teamspeak3"),
 	  ((mod1Mask, xK_F5), spawn "steam"),
-	  ((mod1Mask, xK_F6), spawn "discord"),
+	  ((mod1Mask, xK_F6), spawn "pac"),
 	  ((mod1Mask, xK_F7), spawn "multimc"),
 	  ((mod1Mask, xK_F8), spawn "virtualbox"),
 	  ((mod1Mask, xK_F9), spawn "dbeaver"),

@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joe/.oh-my-zsh"
 export GOPATH="/home/joe/go"
+export DISPLAY=:0
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -104,6 +105,8 @@ alias sus="systemctl suspend"
 alias pacman="sudo pacman"
 alias code="code --disable-gpu"
 alias vim="/usr/bin/nvim"
+alias bim="vim"
+alias v="vim"
 alias oldvim="/usr/bin/vim"
 alias ll="exa -l"
 alias l="exa -al"
@@ -112,5 +115,6 @@ export PRG="/home/joe/Programming"
 export EDITOR=nvim
 export NNN_PLUG='v:imgviu;t:imgthumb'
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.cache/yay/haskell-ide-engine/pkg/haskell-ide-engine/usr/bin
 
 source /home/joe/.config/broot/launcher/bash/br

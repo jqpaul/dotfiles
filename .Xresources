@@ -1,41 +1,41 @@
 ! special
-*.foreground:   #cddaad
-*.background:   #080a06
-*.cursorColor:  #cddaad
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
 
 ! black
-*.color0:       #10120b
-*.color8:       #66aac0
+*.color0:       #282a2e
+*.color8:       #373b41
 
 ! red
-*.color1:       #1a1c14
-*.color9:       #5bc9a6
+*.color1:       #a54242
+*.color9:       #cc6666
 
 ! green
-*.color2:       #2a2d22
-*.color10:      #9ab33b
+*.color2:       #8c9440
+*.color10:      #b5bd68
 
 ! yellow
-*.color3:       #424636
-*.color11:      #55afc8
+*.color3:       #de935f
+*.color11:      #f0c674
 
 ! blue
-*.color4:       #5f654f
-*.color12:      #b59de1
+*.color4:       #5f819d
+*.color12:      #81a2be
 
 ! magenta
-*.color5:       #828a6d
-*.color13:      #399579
+*.color5:       #85678f
+*.color13:      #b294bb
 
 ! cyan
-*.color6:       #acb690
-*.color14:      #a571ee
+*.color6:       #5e8d87
+*.color14:      #8abeb7
 
 ! white
-*.color7:       #dbe8b8
-*.color15:      #cd8d5d
+*.color7:       #707880
+*.color15:      #c5c8c6
+
 
 URxvt.borderWidth: 0
 URxvt.internalBorder: 0
 URxvt.externalBorder: 0
-
