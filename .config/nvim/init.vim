@@ -1,6 +1,7 @@
 " === VUNDLE PLUGINS === "
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin("~/.config/nvim/bundle")
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'preservim/nerdtree'
@@ -12,6 +13,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vimwiki/vimwiki'
+Plugin 'dense-analysis/ale'
 call vundle#end()
 
 
@@ -23,7 +25,7 @@ set ignorecase
 set so=7
 set inccommand=split
 set splitbelow splitright
-filetype plugin on
+filetype plugin indent on
 syntax on
 
 
@@ -66,6 +68,10 @@ noremap <Right> <nop>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
 let g:airline#extendiond#tabline#formatter = 'unique_tail'
+
+let b:ale_linters = ['flake8', 'pylint']
+let b:ale_fixers = ['autopep8']
+let b:ale_warn_about_trailing_whitespace = 0
 
 highlight GitGutterAdd ctermfg=yellow
 highlight GitGutterChange ctermfg=yellow
