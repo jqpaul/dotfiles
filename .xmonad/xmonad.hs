@@ -49,6 +49,7 @@ main = do
 
 	  -- Applications --
 	  ((mod1Mask, xK_d), spawn "rofi -show"),
+	  ((mod1Mask, xK_c), spawn "rofi -modi "clipboard:greenclip print" -show clipboard"),
 	  ((mod1Mask, xK_b), spawn "alacritty -e vifm"),
 
 	  -- Navigation --
@@ -61,4 +62,5 @@ main = do
 	  -- Kill --
 	  ((mod1Mask .|. shiftMask, xK_e), io (exitWith ExitSuccess)),
 	  ((mod1Mask .|. shiftMask, xK_q), kill)
+      ((mod1Mask, xK_q), io restart) 
 	]

@@ -70,7 +70,10 @@ ZSH_THEME="crunch"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions)
+plugins=(
+	zsh-autosuggestions
+	fzf
+)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -105,16 +108,16 @@ alias sus="systemctl suspend"
 alias pacman="sudo pacman"
 alias code="code --disable-gpu"
 alias vim="/usr/bin/nvim"
-alias bim="vim"
 alias v="vim"
 alias oldvim="/usr/bin/vim"
 alias ll="exa -l"
 alias l="exa -al"
+alias his="history | fzf"
+# alias kil="kill $(ps aux | fzf | awk {'print $2'})"
 
 export PRG="/home/joe/Programming"
 export EDITOR=nvim
 export NNN_PLUG='v:imgviu;t:imgthumb'
 export PATH=$PATH:~/.cargo/bin
-export PATH=$PATH:~/.cache/yay/haskell-ide-engine/pkg/haskell-ide-engine/usr/bin
 
 source /home/joe/.config/broot/launcher/bash/br
