@@ -18,10 +18,6 @@ Plugin 'sbdchd/neoformat'
 Plugin 'joshdick/onedark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-obsession'
-" Plugin 'autozimu/LanguageClient-neovim', {
-"      \ 'branch': 'next',
-"      \ 'do': 'bash install.sh',
-"      \ }
 call vundle#end()
 
 
@@ -31,12 +27,14 @@ set hidden
 set mouse=a
 set ignorecase
 set tabstop=4
+set softtabstop=0 noexpandtab
+set shiftwidth=4
 set so=7
 set inccommand=split
 set splitbelow splitright
 set nobackup
 set nowritebackup
-set cmdheight=2
+set cmdheight=1
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
@@ -70,7 +68,7 @@ map ' `
 map <F9> :e $MYVIMRC<CR>
 map <C-x> <ESC>:bn<CR>
 map <C-z> <ESC>:bp<CR>
-map <C-s> <ESC>:bd<CR>
+map <C-g> <ESC>:bd<CR>
 map <C-q> <ESC>:14sp<CR>:ter<CR>
 tnoremap <ESC> <C-\><C-n>
 tnoremap <C-q> <C-\><C-n>:q<CR>
@@ -97,28 +95,15 @@ map <down> :resize -2<CR>
 map <left> :vertical resize +2<CR>
 map <right> :vertical resize -2<CR>
 
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
 
 " === SETTINGS FOR PLUGINS === "
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
-let g:airline#extendiond#tabline#formatter = 'tail'
+let g:airline#extendiond#tabline#formatter = 'jsformatter'
 
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'
 
-
-" === CoC SETTINGS === "
-" === Current Mapping:
-" \gd -> definition
-" \gt -> type definition
-" \gi -> implementation
-" \gr -> reference
-" \rn -> rename
 
 " Close preview window after completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -151,6 +136,9 @@ nmap <leader>gt <Plug>(coc-type-definition)
 nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>oi :CocCommand java.action.organizeImports<CR>
+nmap <leader>aa :CocAction<CR>
+
 
 " Show Documentation WITH K
 nnoremap <silent> K :call <SID>show_documentation()<CR>

@@ -112,7 +112,6 @@ alias v="vim"
 alias oldvim="/usr/bin/vim"
 alias ll="exa -l"
 alias l="exa -al"
-alias his="history | fzf"
 # alias kil="kill $(ps aux | fzf | awk {'print $2'})"
 
 export PRG="/home/joe/Programming"
