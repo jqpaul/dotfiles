@@ -16,7 +16,7 @@ URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 0
 URxvt.tabbed.tab-bg: 1
 URxvt.tabbed.secondaryScroll: true
-URxvt.tabbed.font: xft:Bitstream Vera Sans Mono:pixelsize=12
+URxvt.tabbed.font: xft:Bitstream Vera Sans Mono:pixelsize=10
 URxvt.iso14755: true
 URxvt.iso14755_52: false
 URxvt*inheritPixmap: true

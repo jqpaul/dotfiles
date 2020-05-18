@@ -18,6 +18,8 @@ Plugin 'sbdchd/neoformat'
 Plugin 'joshdick/onedark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-obsession'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'easymotion/vim-easymotion'
 call vundle#end()
 
 
@@ -44,14 +46,8 @@ syntax on
 
 
 " === COLORSCHEME SETTINGS === "
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme gruvbox
 call togglebg#map("<F5>")
-highlight clear SignColumn
-highlight GitGutterAdd ctermfg=yellow
-highlight GitGutterChange ctermfg=yellow
-highlight GitGutterDelete ctermfg=red
-highlight GitGutterChangeDelete ctermfg=yellow
 
 
 " === MAPPINGS FOR PLUGINS === "
@@ -65,7 +61,7 @@ nmap <F8> :TagbarToggle<CR>
 " === MAPPINGS FOR REGULAR USE === "
 map Q <nop>
 map ' `
-map <F9> :e $MYVIMRC<CR>
+map <F12> :e $MYVIMRC<CR>
 map <C-x> <ESC>:bn<CR>
 map <C-z> <ESC>:bp<CR>
 map <C-g> <ESC>:bd<CR>
@@ -105,6 +101,7 @@ let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/
 let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'
 
 
+" === COC === "
 " Close preview window after completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
@@ -138,7 +135,6 @@ nmap <leader>gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>oi :CocCommand java.action.organizeImports<CR>
 nmap <leader>aa :CocAction<CR>
-
 
 " Show Documentation WITH K
 nnoremap <silent> K :call <SID>show_documentation()<CR>

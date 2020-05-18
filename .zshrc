@@ -108,10 +108,11 @@ alias sus="systemctl suspend"
 alias pacman="sudo pacman"
 alias code="code --disable-gpu"
 alias vim="/usr/bin/nvim"
-alias v="vim"
 alias oldvim="/usr/bin/vim"
 alias ll="exa -l"
 alias l="exa -al"
+
+alias "git log"="git log --decorate --oneline --all"
 # alias kil="kill $(ps aux | fzf | awk {'print $2'})"
 
 export PRG="/home/joe/Programming"

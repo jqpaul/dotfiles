@@ -6,18 +6,55 @@ import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.StackSet as W
 import XMonad.Layout.Gaps
+import XMonad.Util.NamedScratchpad
+import XMonad.ManageHook
+
+import XMonad.Layout.PerWorkspace (onWorkspace) 
+import XMonad.Layout.Renamed (renamed, Rename(CutWordsLeft, Replace))
+import XMonad.Layout.WorkspaceDir
+import XMonad.Layout.Spacing (spacing) 
+import XMonad.Layout.NoBorders
+import XMonad.Layout.LimitWindows (limitWindows, increaseLimit, decreaseLimit)
+import XMonad.Layout.WindowArranger (windowArrange, WindowArrangerMsg(..))
+import XMonad.Layout.Reflect (reflectVert, reflectHoriz, REFLECTX(..), REFLECTY(..))
+import XMonad.Layout.MultiToggle (mkToggle, single, EOT(EOT), Toggle(..), (??))
+import XMonad.Layout.MultiToggle.Instances (StdTransformers(NBFULL, MIRROR, NOBORDERS))
+import qualified XMonad.Layout.ToggleLayouts as T (toggleLayouts, ToggleLayout(Toggle))
+
+    -- Layouts
+import XMonad.Layout.GridVariants (Grid(Grid))
+import XMonad.Layout.SimplestFloat
+import XMonad.Layout.OneBig
+import XMonad.Layout.ThreeColumns
+import XMonad.Layout.ResizableTile
+import XMonad.Layout.ZoomRow (zoomRow, zoomIn, zoomOut, zoomReset, ZoomMessage(ZoomFullToggle))
+import XMonad.Layout.IM (withIM, Property(Role))
 
 import System.IO
 import System.Exit
 
+myScratchPads = [ NS "xterm" "xterm -e htop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
+                  NS "spotify" "spotify" (title =? "Spotify Premium") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
+                  NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
+    where
+    manageTerm = customFloating $ RationalRect l t w h
+                 where
+                 h = 0.9
+                 w = 0.9
+                 t = 0.95 -h
+                 l = 0.95 -w
 
 xmonadStartupHook = do
     spawn "sh /home/joe/Programming/bin/bg.sh 13"
 
+myManageHook = composeAll
+    [ manageDocks
+    ] <+> namedScratchpadManageHook myScratchPads
+
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/joe/.xmonad/xmobar"
     xmonad $ def {
-    manageHook = manageDocks <+> manageHook def,
+	manageHook = myManageHook,
     layoutHook = avoidStruts  $  layoutHook def,
     handleEventHook = handleEventHook def <+> docksEventHook,
     startupHook = xmonadStartupHook,
@@ -26,7 +63,7 @@ main = do
           ppTitle = xmobarColor "green" "" . shorten 50
         },
     borderWidth        = 0,
-    terminal           = "alacritty",
+    terminal         = "alacritty",
     normalBorderColor  = "#000000",
     focusedBorderColor = "#3f3f3f"
     } `additionalKeys` [
@@ -45,9 +82,11 @@ main = do
       ((mod1Mask, xK_F12), spawn "firefox --private-window"),
       ((mod1Mask, xK_q), spawn "xmonad --recompile;xmonad --restart"),
 	  
-
           -- Terminal --
       ((mod1Mask, xK_Return), spawn "alacritty"),
+      ((mod1Mask, xK_i), namedScratchpadAction myScratchPads "alacritty"),
+      ((mod1Mask, xK_u), namedScratchpadAction myScratchPads "xterm"),
+      ((mod1Mask, xK_s), namedScratchpadAction myScratchPads "spotify"),
       ((mod1Mask .|. shiftMask, xK_Return), spawn "urxvt"),
 
       -- Applications --
