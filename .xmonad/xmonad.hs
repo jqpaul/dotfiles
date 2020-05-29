@@ -33,8 +33,9 @@ import XMonad.Layout.IM (withIM, Property(Role))
 import System.IO
 import System.Exit
 
-myScratchPads = [ NS "xterm" "xterm -e htop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
-                  NS "spotify" "spotify" (title =? "Spotify Premium") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
+myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
+                  NS "spotify" "spotify" (resource =? "spotify") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
+                  NS "zathura" "zathura" (resource =? "org.pwmt.zathura") (customFloating $ W.RationalRect (1/4) (0) (2/4) (0.97)),
                   NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
     where
     manageTerm = customFloating $ RationalRect l t w h
@@ -85,8 +86,9 @@ main = do
           -- Terminal --
       ((mod1Mask, xK_Return), spawn "alacritty"),
       ((mod1Mask, xK_i), namedScratchpadAction myScratchPads "alacritty"),
-      ((mod1Mask, xK_u), namedScratchpadAction myScratchPads "xterm"),
+      ((mod1Mask, xK_u), namedScratchpadAction myScratchPads "htop"),
       ((mod1Mask, xK_s), namedScratchpadAction myScratchPads "spotify"),
+      ((mod1Mask, xK_m), namedScratchpadAction myScratchPads "zathura"),
       ((mod1Mask .|. shiftMask, xK_Return), spawn "urxvt"),
 
       -- Applications --
@@ -100,6 +102,9 @@ main = do
       ((mod4Mask .|. controlMask, xK_Right), moveTo Next NonEmptyWS),
       ((mod1Mask, xK_o), moveTo Prev NonEmptyWS),
       ((mod4Mask .|. controlMask, xK_Left), moveTo Prev NonEmptyWS),
+
+	  -- Utils --
+      ((mod1Mask .|. shiftMask, xK_p), spawn "~/.xmonad/resources/xkb.sh"),
 
       -- Kill --
       ((mod1Mask .|. shiftMask, xK_e), io (exitWith ExitSuccess)),

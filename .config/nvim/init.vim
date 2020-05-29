@@ -20,6 +20,8 @@ Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-obsession'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'sirver/UltiSnips'
+Plugin 'honza/vim-snippets'
 call vundle#end()
 
 
@@ -56,6 +58,7 @@ map <C-a> :Files<CR>
 map <C-b> :Buffers<CR>
 map <C-S-f> :Neoformat<CR>
 nmap <F8> :TagbarToggle<CR>
+map rg :Rg<CR>
 
 
 " === MAPPINGS FOR REGULAR USE === "
@@ -64,7 +67,7 @@ map ' `
 map <F12> :e $MYVIMRC<CR>
 map <C-x> <ESC>:bn<CR>
 map <C-z> <ESC>:bp<CR>
-map <C-g> <ESC>:bd<CR>
+map <C-g> <ESC>:bd!<CR>
 map <C-q> <ESC>:14sp<CR>:ter<CR>
 tnoremap <ESC> <C-\><C-n>
 tnoremap <C-q> <C-\><C-n>:q<CR>
@@ -96,6 +99,7 @@ map <right> :vertical resize -2<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
 let g:airline#extendiond#tabline#formatter = 'jsformatter'
+let g:UltiSnipsExpandTrigger="<C-l>"
 
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'

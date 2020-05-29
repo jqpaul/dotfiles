@@ -31,7 +31,8 @@ Config
          , "-n", "#ff963f"
          ] 10
       , Run Date "<fc=#ee9a00>%a %0d-%m-%Y %H:%M:%S</fc>" "date" 10
-      , Run Com "bash" ["-c", "~/.xmonad/resources/spotify.sh"] "" 10
+      , Run Com "bash" ["-c", "~/.xmonad/resources/spotify.sh"] "bash1" 10
+      , Run Com "bash" ["-c", "~/.xmonad/resources/get_current_layout.sh"] "bash2" 10
       , Run Com "uname" ["-s","-r"] "" 0
       , Run DynNetwork
          [ "-t", "<icon=network-icon_24.xpm/> <icon=actions-arrow-down-icon_24.xpm/><rx>KB <icon=actions-arrow-up-icon_24.xpm/><tx>KB"
@@ -47,5 +48,5 @@ Config
    , sepChar = "%"
    , alignSep = "}{"
 
-   , template = "%UnsafeStdinReader% } %date% { %bash% | %cpu% | %coretemp% | %memory% | %dynnetwork%"
+   , template = "%UnsafeStdinReader% } %date% %bash2% { %bash1% | %cpu% | %coretemp% | %memory% | %dynnetwork%"
    }

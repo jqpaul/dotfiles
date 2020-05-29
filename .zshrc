@@ -119,5 +119,6 @@ export PRG="/home/joe/Programming"
 export EDITOR=nvim
 export NNN_PLUG='v:imgviu;t:imgthumb'
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.local/bin
 
 source /home/joe/.config/broot/launcher/bash/br
