@@ -1,6 +1,5 @@
 URxvt.saveLines: 1000
 URxvt.scrollBar: false
-URxvt.shading: 20
 URxvt.foreground: white
 URxvt.background: black
 URxvt.secondaryScroll: true

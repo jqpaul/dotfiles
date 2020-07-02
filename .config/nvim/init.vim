@@ -18,26 +18,36 @@ Plugin 'sbdchd/neoformat'
 Plugin 'joshdick/onedark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-obsession'
-Plugin 'edkolev/tmuxline.vim'
+" Plugin 'edkolev/tmuxline.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'sirver/UltiSnips'
 Plugin 'honza/vim-snippets'
+Plugin 'vifm/vifm.vim'
 call vundle#end()
 
 
 " === MISC SETTINGS === "
+" Linenumbers
 set number relativenumber
 set hidden
+" Enable mouse
 set mouse=a
 set ignorecase
+" Space for tabs
 set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
+" Min cursor distance to window edge
 set so=7
-set inccommand=split
+" Live document changes on replace
+set inccommand=nosplit
+" Open new splits 
 set splitbelow splitright
 set nobackup
 set nowritebackup
+" Command history
+set history=1000
+" Height of command bar
 set cmdheight=1
 set updatetime=300
 set shortmess+=c
@@ -49,30 +59,41 @@ syntax on
 
 " === COLORSCHEME SETTINGS === "
 colorscheme gruvbox
+" colorscheme preto
 call togglebg#map("<F5>")
 
 
 " === MAPPINGS FOR PLUGINS === "
+" Nerdtree
 map <C-n> :NERDTreeToggle<CR>
+" fzf
 map <C-a> :Files<CR>
 map <C-b> :Buffers<CR>
-map <C-S-f> :Neoformat<CR>
-nmap <F8> :TagbarToggle<CR>
 map rg :Rg<CR>
+" Code formatter
+map <C-S-f> :Neoformat<CR>
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
 
 
 " === MAPPINGS FOR REGULAR USE === "
 map Q <nop>
 map ' `
+" Open vim config
 map <F12> :e $MYVIMRC<CR>
+" Buffer navigation
 map <C-x> <ESC>:bn<CR>
 map <C-z> <ESC>:bp<CR>
 map <C-g> <ESC>:bd!<CR>
+" Bindings for terminal opening and closing
 map <C-q> <ESC>:14sp<CR>:ter<CR>
 tnoremap <ESC> <C-\><C-n>
 tnoremap <C-q> <C-\><C-n>:q<CR>
+" Copy and Paste from system clipboard
 map <leader>c "+y
 map <leader>v "+p
+" Stop highlighting after ESC
+nnoremap <ESC> :noh<CR>
 
 
 " === LESS RAGE === "
@@ -96,11 +117,20 @@ map <right> :vertical resize -2<CR>
 
 
 " === SETTINGS FOR PLUGINS === "
+" VimWiki
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/'}]
+					 "\ 'syntax': 'markdown',
+					 "\ 'ext': '.md'}]
+" Nerdtree
+let NERDTreeShowHidden=1
+" Status bar
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
 let g:airline#extendiond#tabline#formatter = 'jsformatter'
+" Snippets
 let g:UltiSnipsExpandTrigger="<C-l>"
 
+" fzf
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'
 
@@ -139,6 +169,10 @@ nmap <leader>gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>oi :CocCommand java.action.organizeImports<CR>
 nmap <leader>aa :CocAction<CR>
+nmap <leader>[d <Plug>(coc-diagnostic-prev)
+nmap <leader>]d <Plug>(coc-diagnostic-next)
+
+nnoremap <leader>dd  :<C-u>CocList diagnostics<cr>
 
 " Show Documentation WITH K
 nnoremap <silent> K :call <SID>show_documentation()<CR>

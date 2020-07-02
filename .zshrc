@@ -112,13 +112,19 @@ alias oldvim="/usr/bin/vim"
 alias ll="exa -l"
 alias l="exa -al"
 
-alias "git log"="git log --decorate --oneline --all"
+# Git Aliases
+alias "gst"="git status"
+gco() {
+	git commit -am $1
+}
+alias "gpush"="git push"
+alias "glo"="git log --decorate --oneline --all"
 # alias kil="kill $(ps aux | fzf | awk {'print $2'})"
 
 export PRG="/home/joe/Programming"
 export EDITOR=nvim
-export NNN_PLUG='v:imgviu;t:imgthumb'
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.pyenv/bin
 
-source /home/joe/.config/broot/launcher/bash/br
+eval "$(pyenv init -)"
