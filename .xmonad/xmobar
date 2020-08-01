@@ -1,5 +1,5 @@
 Config
-   { font = "xft:DejaVuSansMono:size=12"
+   { font = "xft:DejaVuSansMono:size=13"
    , additionalFonts = []        -- default: []
    , borderColor = "white"
    , border = NoBorder
@@ -49,4 +49,4 @@ Config
    , alignSep = "}{"
 
    , template = "%UnsafeStdinReader% } %date% %bash2% { %bash1% | %cpu% | %coretemp% | %memory% | %dynnetwork%"
-   }
+}

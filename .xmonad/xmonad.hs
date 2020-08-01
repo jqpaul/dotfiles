@@ -2,12 +2,22 @@ import XMonad
 import XMonad.Actions.CycleWS
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.StackSet as W
 import XMonad.Layout.Gaps
 import XMonad.Util.NamedScratchpad
 import XMonad.ManageHook
+
+import XMonad.Layout.Gaps
+import XMonad.Layout.Fullscreen
+import XMonad.Layout.BinarySpacePartition as BSP
+import XMonad.Layout.Tabbed
+import XMonad.Layout.NoFrillsDecoration
+import XMonad.Layout.Simplest
+import XMonad.Layout.SubLayouts
+import XMonad.Layout.WindowNavigation
 
 import XMonad.Layout.PerWorkspace (onWorkspace) 
 import XMonad.Layout.Renamed (renamed, Rename(CutWordsLeft, Replace))
@@ -35,8 +45,8 @@ import System.Exit
 
 myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
                   NS "spotify" "spotify" (resource =? "spotify") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
-                  NS "zathura" "zathura" (resource =? "org.pwmt.zathura") (customFloating $ W.RationalRect (3/5) (0) (2/5) (0.976)),
-                  NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (1/4) (0) (2/4) (0.97)),
+                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "org.pwmt.zathura") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
+                  NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
                   NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
     where
     manageTerm = customFloating $ RationalRect l t w h
@@ -50,7 +60,8 @@ xmonadStartupHook = do
     spawn "sh /home/joe/Programming/bin/bg.sh 13"
 
 myManageHook = composeAll
-    [ manageDocks
+    [ className =? "Picture-in-Picture" --> doCenterFloat
+	, manageDocks
     ] <+> namedScratchpadManageHook myScratchPads
 
 main = do

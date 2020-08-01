@@ -35,7 +35,6 @@
 
 
 
-# "i3lock-fancy"
 # "/home/joe/Python/lock/lock.sh"
 "/home/joe/Programming/Python/lock/lock.sh"
     m:0x5 + c:65
@@ -46,15 +45,17 @@
     m:0x5 + c:36
     Control+Shift + Return 
 
-# "mocp -f"
-"playerctl next"
+"playerctl previous"
     m:0x5 + c:57
     Control+Shift + n 
 
-# "mocp -G"
 "playerctl play-pause"
     m:0x5 + c:58
     Control+Shift + m 
+
+"playerctl next"
+    m:0x5 + c:59
+    Control+Shift + comma
 
 "pactl set-sink-volume @DEFAULT_SINK@ -10%"
    Control+Shift + Down

@@ -18,11 +18,12 @@ Plugin 'sbdchd/neoformat'
 Plugin 'joshdick/onedark.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-obsession'
-" Plugin 'edkolev/tmuxline.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'sirver/UltiSnips'
 Plugin 'honza/vim-snippets'
 Plugin 'vifm/vifm.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 call vundle#end()
 
 
@@ -71,9 +72,13 @@ map <C-a> :Files<CR>
 map <C-b> :Buffers<CR>
 map rg :Rg<CR>
 " Code formatter
-map <C-S-f> :Neoformat<CR>
+map <C-f> :Neoformat<CR>
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+" Goyo
+map <leader>gg :Goyo<CR>
+" Markdown Preview
+nmap <C-m> <Plug>MarkdownPreviewToggle
 
 
 " === MAPPINGS FOR REGULAR USE === "
@@ -106,7 +111,7 @@ command Q q
 " === AUTOCLOSE BRACKETS === "
 ino [<CR> [<CR>]<ESC>O
 ino {<CR> {<CR>}<ESC>O
-ino (<CR> (<CR>)<ESC>O
+" ino (<CR> (<CR>)<ESC>O
 
 
 " === UNMAP ARROW KEYS === "

@@ -1,6 +1,6 @@
 #!/bin/bash
 running=$(pidof spotify)
-pla="test"
+pla="-"
 if [ "$running" != "" ]; then
 	if [ "$(playerctl status)" == "Paused" ]; then 
 		pla="||"
