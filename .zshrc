@@ -110,8 +110,14 @@ alias pacman="sudo pacman"
 alias code="code --disable-gpu"
 alias vim="/usr/bin/nvim"
 alias oldvim="/usr/bin/vim"
-alias ll="exa -l"
-alias l="exa -al"
+if ! command -v exa &> /dev/null
+then
+	alias ll="ls -l"
+	alias l="ls -al"
+else
+	alias ll="exa -l"
+	alias l="exa -al"
+fi
 
 # Git Aliases
 alias "gst"="git status"
@@ -120,6 +126,7 @@ gco() {
 }
 alias "gpush"="git push"
 alias "glo"="git log --decorate --oneline --all"
+alias "gdf"="git diff"
 # alias kil="kill $(ps aux | fzf | awk {'print $2'})"
 
 export PRG="/home/joe/Programming"

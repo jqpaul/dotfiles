@@ -1,5 +1,5 @@
 Config
-   { font = "xft:DejaVuSansMono:size=13"
+   { font = "xft:SourceCodePro:size=13:antialias=true"
    , additionalFonts = []        -- default: []
    , borderColor = "white"
    , border = NoBorder
@@ -13,7 +13,7 @@ Config
    , pickBroadest = False        -- default: False
    , persistent = True
    , hideOnStart = False
-   , iconRoot = "/home/joea/.xmonad/resources"  -- default: "."
+   , iconRoot = "/home/joe/.xmonad/resources"  -- default: "."
    , allDesktops = True          -- default: True
    , overrideRedirect = False    -- default: True
    , commands =
@@ -48,5 +48,5 @@ Config
    , sepChar = "%"
    , alignSep = "}{"
 
-   , template = "%UnsafeStdinReader% } %date% %bash2% { %bash1% | %cpu% | %coretemp% | %memory% | %dynnetwork%"
+   , template = "<fc=#ee9a00>%UnsafeStdinReader%</fc> } %date% %bash2% { %bash1% | %cpu% | %coretemp% | %memory% | %dynnetwork%"
 }

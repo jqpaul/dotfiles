@@ -17,6 +17,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'sbdchd/neoformat'
 Plugin 'joshdick/onedark.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'tpope/vim-obsession'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'sirver/UltiSnips'
@@ -39,7 +40,9 @@ set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 " Min cursor distance to window edge
-set so=7
+set so=5
+" Puts a ruler after 75 characters
+set colorcolumn=75
 " Live document changes on replace
 set inccommand=nosplit
 " Open new splits 
@@ -59,8 +62,12 @@ syntax on
 
 
 " === COLORSCHEME SETTINGS === "
-colorscheme gruvbox
-" colorscheme preto
+set t_Co=256   " This is may or may not needed.
+" set background=light
+" colorscheme PaperColor
+
+" colorscheme gruvbox
+colorscheme preto
 call togglebg#map("<F5>")
 
 
@@ -79,6 +86,7 @@ nmap <F8> :TagbarToggle<CR>
 map <leader>gg :Goyo<CR>
 " Markdown Preview
 nmap <C-m> <Plug>MarkdownPreviewToggle
+xmap <Tab> <Plug>(coc-snippets-select)
 
 
 " === MAPPINGS FOR REGULAR USE === "
@@ -99,7 +107,8 @@ map <leader>c "+y
 map <leader>v "+p
 " Stop highlighting after ESC
 nnoremap <ESC> :noh<CR>
-
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
 " === LESS RAGE === "
 command WQ wq
@@ -123,20 +132,24 @@ map <right> :vertical resize -2<CR>
 
 " === SETTINGS FOR PLUGINS === "
 " VimWiki
-let g:vimwiki_list = [{'path': '~/Documents/vimwiki/'}]
-					 "\ 'syntax': 'markdown',
-					 "\ 'ext': '.md'}]
+let g:vimwiki_list = [{
+					 \ 'path': '/mnt/jonah/Docs/VimMd',
+					 \ 'syntax': 'markdown',
+					 \ 'ext': '.md'}]
 " Nerdtree
 let NERDTreeShowHidden=1
 " Status bar
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='dark'
+" let g:airline_theme='base16'
+let g:airline_theme='atomic'
 let g:airline#extendiond#tabline#formatter = 'jsformatter'
 " Snippets
-let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsExpandTrigger="<C-l><C-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
 " fzf
-let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
+let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o -type f -print -o -type l -print 2> /dev/null"
 let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'
 
 
@@ -144,7 +157,7 @@ let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'
 " Close preview window after completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
-" Completion on TAB
+" Switch completion on TAB
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -161,9 +174,9 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Comfirm completion with ENTER
 if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+  inoremap <expr> <L> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<L>"
 else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+  inoremap <expr> <L> pumvisible() ? "\<C-y>" : "\<C-g>u\<L>"
 endif
 
 " GOTO Mapping
@@ -179,7 +192,7 @@ nmap <leader>]d <Plug>(coc-diagnostic-next)
 
 nnoremap <leader>dd  :<C-u>CocList diagnostics<cr>
 
-" Show Documentation WITH K
+" Show documentation with K
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()

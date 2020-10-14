@@ -45,7 +45,7 @@ import System.Exit
 
 myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
                   NS "spotify" "spotify" (resource =? "spotify") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
-                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "org.pwmt.zathura") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
+                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "org.pwmt.zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.976)),
                   NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
                   NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
     where
@@ -81,17 +81,9 @@ main = do
     focusedBorderColor = "#3f3f3f"
     } `additionalKeys` [
       -- F-Keys --
-      ((mod1Mask, xK_F1), spawn "spotify"),
+      ((mod1Mask, xK_F1), spawn "vlc"),
       ((mod1Mask, xK_F2), spawn "firefox-developer-edition"),
       ((mod1Mask, xK_F3), spawn "pavucontrol"),
-      ((mod1Mask, xK_F4), spawn "teamspeak3"),
-      ((mod1Mask, xK_F5), spawn "steam"),
-      ((mod1Mask, xK_F6), spawn "pac"),
-      ((mod1Mask, xK_F7), spawn "multimc"),
-      ((mod1Mask, xK_F8), spawn "virtualbox"),
-      ((mod1Mask, xK_F9), spawn "dbeaver"),
-      ((mod1Mask, xK_F10), spawn "vlc"),
-      ((mod1Mask, xK_F11), spawn "zeal"),
       ((mod1Mask, xK_F12), spawn "firefox --private-window"),
       ((mod1Mask, xK_q), spawn "xmonad --recompile;xmonad --restart"),
 	  
