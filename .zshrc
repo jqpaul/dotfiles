@@ -6,6 +6,8 @@ export ZSH="/home/joe/.oh-my-zsh"
 export GOPATH="/home/joe/go"
 export DISPLAY=:0
 
+export GTK_THEME=Adwaita:dark
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -107,7 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sus="systemctl suspend"
 alias pacman="sudo pacman"
-alias code="code --disable-gpu"
 alias vim="/usr/bin/nvim"
 alias oldvim="/usr/bin/vim"
 if ! command -v exa &> /dev/null
@@ -121,8 +122,17 @@ fi
 
 # Git Aliases
 alias "gst"="git status"
+code() {
+	code --disable-gpu $1
+}
 gco() {
 	git commit -am $1
+}
+cop() {
+	rsync -ah --progress $1 $2
+}
+mov() {
+	rsync -ah --progress --remove-source-files $1 $2
 }
 alias "gpush"="git push"
 alias "glo"="git log --decorate --oneline --all"

@@ -3,7 +3,7 @@ Config
    , additionalFonts = []        -- default: []
    , borderColor = "white"
    , border = NoBorder
-   , bgColor = "#341616"
+   , bgColor = "#262626"
    , fgColor = "white"
    , alpha = 255                 -- default: 255
    , position = BottomSize C 100 26
@@ -21,7 +21,7 @@ Config
          [ "-t", "<icon=thermometer-icon_24.xpm/><core0>°C"
          , "-H", "60", "-h", "red"
          , "-L", "40", "-l", "#ff963f"
-         , "-n", "#ff96ef"
+         , "-n", "#ffffff"
          ] 50
       , Run Cpu
          [ "-t", "<icon=gnome_cpu_24.xpm/> <total>%"
@@ -31,8 +31,9 @@ Config
          , "-n", "#ff963f"
          ] 10
       , Run Date "<fc=#ee9a00>%a %0d-%m-%Y %H:%M:%S</fc>" "date" 10
-      , Run Com "bash" ["-c", "~/.xmonad/resources/spotify.sh"] "bash1" 10
-      , Run Com "bash" ["-c", "~/.xmonad/resources/get_current_layout.sh"] "bash2" 10
+      , Run Com "bash" ["-c", "~/.xmonad/resources/spotify.sh"] "bash1" 20
+      , Run Com "bash" ["-c", "~/.xmonad/resources/get_current_layout.sh"] "bash2" 5
+      , Run Com "bash" ["-c", "~/.xmonad/resources/get_volume.sh"] "bash3" 5
       , Run Com "uname" ["-s","-r"] "" 0
       , Run DynNetwork
          [ "-t", "<icon=network-icon_24.xpm/> <icon=actions-arrow-down-icon_24.xpm/><rx>KB <icon=actions-arrow-up-icon_24.xpm/><tx>KB"
@@ -48,5 +49,5 @@ Config
    , sepChar = "%"
    , alignSep = "}{"
 
-   , template = "<fc=#ee9a00>%UnsafeStdinReader%</fc> } %date% %bash2% { %bash1% | %cpu% | %coretemp% | %memory% | %dynnetwork%"
+   , template = "<fc=#ee9a00>%UnsafeStdinReader%</fc> } %date% %bash2% { %bash1% | vol: %bash3% | cpu:%cpu% @ %coretemp% | %memory% | %dynnetwork%"
 }

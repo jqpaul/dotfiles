@@ -30,7 +30,7 @@ call vundle#end()
 
 " === MISC SETTINGS === "
 " Linenumbers
-set number relativenumber
+set number
 set hidden
 " Enable mouse
 set mouse=a
@@ -51,6 +51,8 @@ set nobackup
 set nowritebackup
 " Command history
 set history=1000
+" Disable swap files
+set noswapfile
 " Height of command bar
 set cmdheight=1
 set updatetime=300
@@ -58,7 +60,10 @@ set shortmess+=c
 set signcolumn=yes
 set ssop-=options
 filetype plugin indent on
+" Syntax highlighting on
 syntax on
+" Add linux header files to path for 'gf' to open files
+let &path.="/lib/modules/5.8.14-arch1-1/build/include"
 
 
 " === COLORSCHEME SETTINGS === "
@@ -106,9 +111,11 @@ tnoremap <C-q> <C-\><C-n>:q<CR>
 map <leader>c "+y
 map <leader>v "+p
 " Stop highlighting after ESC
-nnoremap <ESC> :noh<CR>
+nnoremap <ESC> :noh<CR>:w<CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+" escape on jk
+inoremap jj <esc>
 
 " === LESS RAGE === "
 command WQ wq
@@ -128,6 +135,11 @@ map <up> :resize +2<CR>
 map <down> :resize -2<CR>
 map <left> :vertical resize +2<CR>
 map <right> :vertical resize -2<CR>
+
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
 
 " === SETTINGS FOR PLUGINS === "
