@@ -44,8 +44,9 @@ import System.IO
 import System.Exit
 
 myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
-                  NS "spotify" "spotify" (resource =? "spotify") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
-                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "org.pwmt.zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.976)),
+                  NS "ffplay" "ffplay rtsp://paul:m4vr7gLG3@hFBpM7@192.168.178.46:554" (resource =? "ffplay") (customFloating $ W.RationalRect (1/4) (1/6) (1/2) (2/3)),
+                  NS "zeal" "zeal" (resource =? "zeal") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
+                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.976)),
                   NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
                   NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
     where
@@ -57,11 +58,11 @@ myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (cust
                  l = 0.95 -w
 
 xmonadStartupHook = do
-    spawn "sh /home/joe/Programming/bin/bg.sh 13"
+    spawn "sh /home/joe/Programming/bin/bg.sh 13 10"
 
 myManageHook = composeAll
     [ className =? "Picture-in-Picture" --> doCenterFloat
-	, manageDocks
+    , manageDocks
     ] <+> namedScratchpadManageHook myScratchPads
 
 main = do
@@ -89,15 +90,16 @@ main = do
 	  
           -- Terminal --
       ((mod1Mask, xK_Return), spawn "alacritty"),
-      ((mod1Mask, xK_i), namedScratchpadAction myScratchPads "alacritty"),
+      ((mod1Mask, xK_i), namedScratchpadAction myScratchPads "ffplay"),
       ((mod1Mask, xK_u), namedScratchpadAction myScratchPads "htop"),
-      ((mod1Mask, xK_s), namedScratchpadAction myScratchPads "spotify"),
+      ((mod1Mask, xK_s), namedScratchpadAction myScratchPads "zeal"),
       ((mod1Mask, xK_n), namedScratchpadAction myScratchPads "evince"),
       ((mod1Mask, xK_m), namedScratchpadAction myScratchPads "zathura"),
       ((mod1Mask .|. shiftMask, xK_Return), spawn "urxvt"),
 
       -- Applications --
       ((mod1Mask, xK_d), spawn "rofi -show run"),
+      ((mod1Mask .|. controlMask, xK_d), spawn "sudo rofi -show run"),
       ((mod1Mask, xK_c), spawn "rofi -modi clipboard:greenclip print -show clipboard"),
       ((mod1Mask, xK_b), spawn "alacritty -e vifm"),
 
@@ -107,6 +109,13 @@ main = do
       ((mod4Mask .|. controlMask, xK_Right), moveTo Next NonEmptyWS),
       ((mod1Mask, xK_o), moveTo Prev NonEmptyWS),
       ((mod4Mask .|. controlMask, xK_Left), moveTo Prev NonEmptyWS),
+
+	  -- Xbindkeys --
+      ((shiftMask .|. controlMask, xK_n), spawn "playerctl previous"),
+      ((shiftMask .|. controlMask, xK_m), spawn "playerctl play-pause"),
+      ((shiftMask .|. controlMask, xK_comma), spawn "playerctl next"),
+      ((shiftMask .|. controlMask, xK_Down), spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%"),
+      ((shiftMask .|. controlMask, xK_Up), spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%"),
 
 	  -- Utils --
       ((mod1Mask .|. shiftMask, xK_p), spawn "~/.xmonad/resources/xkb.sh"),

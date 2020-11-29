@@ -1,8 +1,11 @@
+let s:data_dir = $HOME . '/.local/share/nvim'
+
 " === VUNDLE PLUGINS === "
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin("~/.config/nvim/bundle")
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+"Plugin 'tyru/eskk.vim', { 'branch': 'neovim' }
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'preservim/nerdtree'
@@ -71,8 +74,8 @@ set t_Co=256   " This is may or may not needed.
 " set background=light
 " colorscheme PaperColor
 
-" colorscheme gruvbox
-colorscheme preto
+colorscheme gruvbox
+"colorscheme preto
 call togglebg#map("<F5>")
 
 
@@ -90,9 +93,10 @@ nmap <F8> :TagbarToggle<CR>
 " Goyo
 map <leader>gg :Goyo<CR>
 " Markdown Preview
-nmap <C-m> <Plug>MarkdownPreviewToggle
+map <leader>sx :set keymap=kana<CR>
+map <leader>sz :set keymap=""<CR>
+"nmap <C-m> <Plug>MarkdownPreviewToggle
 xmap <Tab> <Plug>(coc-snippets-select)
-
 
 " === MAPPINGS FOR REGULAR USE === "
 map Q <nop>
@@ -111,7 +115,7 @@ tnoremap <C-q> <C-\><C-n>:q<CR>
 map <leader>c "+y
 map <leader>v "+p
 " Stop highlighting after ESC
-nnoremap <ESC> :noh<CR>:w<CR>
+nnoremap <ESC> <C-c>:noh<CR>:w<CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 " escape on jk
@@ -143,6 +147,8 @@ imap <right> <nop>
 
 
 " === SETTINGS FOR PLUGINS === "
+" CoC
+let g:coc_disable_startup_warning = 1
 " VimWiki
 let g:vimwiki_list = [{
 					 \ 'path': '/mnt/jonah/Docs/VimMd',
@@ -153,17 +159,28 @@ let NERDTreeShowHidden=1
 " Status bar
 let g:airline#extensions#tabline#enabled = 1
 " let g:airline_theme='base16'
-let g:airline_theme='atomic'
+let g:airline_theme='tomorrow'
 let g:airline#extendiond#tabline#formatter = 'jsformatter'
 " Snippets
 let g:UltiSnipsExpandTrigger="<C-l><C-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+" SKK
+"let g:eskk#directory = s:data_dir . '/skk'
+"let g:eskk#dictionary = {
+"    \   'path': s:data_dir . '/skk/skk-jisyo.s',
+"    \   'sorted': 0,
+"    \   'encoding': 'utf-8',
+"    \}
+"let g:eskk#large_dictionary = {
+"    \   'path': s:data_dir . '/skk/SKK-JISYO.L',
+"    \   'sorted': 1,
+"    \   'encoding': 'euc-jp',
+"    \}
 
 " fzf
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o -type f -print -o -type l -print 2> /dev/null"
 let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'
-
 
 " === COC === "
 " Close preview window after completion is done
@@ -185,11 +202,13 @@ endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Comfirm completion with ENTER
-if exists('*complete_info')
-  inoremap <expr> <L> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<L>"
-else
-  inoremap <expr> <L> pumvisible() ? "\<C-y>" : "\<C-g>u\<L>"
-endif
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" if exists('*complete_info')
+"  inoremap <expr> <L> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<L>"
+"else
+"  inoremap <expr> <L> pumvisible() ? "\<C-y>" : "\<C-g>u\<L>"
+"endif
 
 " GOTO Mapping
 nmap <leader>gd <Plug>(coc-definition)
@@ -210,10 +229,20 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+"function! s:show_documentation()
+"  if (index(['vim','help'], &filetype) >= 0)
+"    execute 'h '.expand('<cword>')
+"  else
+"    call CocAction('doHover')
+"  endif
+"endfunction
 
 " Highlight all similar symbols
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -221,5 +250,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
-autocmd CursorMovedI * if pumvisible() == 0|:call coc#util#float_hide()|endif
-autocmd InsertLeave * if pumvisible() == 0|:call coc#util#float_hide()|endif
+autocmd CursorMovedI * if pumvisible() == 0|:call coc#float#close_all()|endif
+" autocmd CursorMovedI * if pumvisible() == 0|:call coc#util#float_hide()|endif
+autocmd InsertLeave * if pumvisible() == 0|:call coc#float#close_all()|endif
+" autocmd InsertLeave * if pumvisible() == 0|:call coc#util#float_hide()|endif

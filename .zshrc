@@ -3,10 +3,18 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joe/.oh-my-zsh"
-export GOPATH="/home/joe/go"
+export GOPATH="/usr/local/go"
 export DISPLAY=:0
+export FZF_BASE="$HOME/.config/nvim/bundle/fzf/shell"
 
 export GTK_THEME=Adwaita:dark
+
+setopt APPEND_HISTORY # Don't erase history
+setopt EXTENDED_HISTORY # Add additional data to history like timestamp
+setopt INC_APPEND_HISTORY # Add immediately
+setopt HIST_FIND_NO_DUPS # Don't show duplicates in search
+setopt NO_HIST_BEEP # Don't beep
+setopt SHARE_HISTORY # Share history between session/terminals
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,42 +115,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sus="systemctl suspend"
-alias pacman="sudo pacman"
-alias vim="/usr/bin/nvim"
-alias oldvim="/usr/bin/vim"
-if ! command -v exa &> /dev/null
-then
-	alias ll="ls -l"
-	alias l="ls -al"
-else
-	alias ll="exa -l"
-	alias l="exa -al"
-fi
 
-# Git Aliases
-alias "gst"="git status"
-code() {
-	code --disable-gpu $1
-}
-gco() {
-	git commit -am $1
-}
-cop() {
-	rsync -ah --progress $1 $2
-}
-mov() {
-	rsync -ah --progress --remove-source-files $1 $2
-}
-alias "gpush"="git push"
-alias "glo"="git log --decorate --oneline --all"
-alias "gdf"="git diff"
-# alias kil="kill $(ps aux | fzf | awk {'print $2'})"
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
 
 export PRG="/home/joe/Programming"
 export EDITOR=nvim
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.pyenv/bin
+export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/usr/local/go/bin
 
-eval "$(pyenv init -)"
+#eval "$(pyenv init -)"
+
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

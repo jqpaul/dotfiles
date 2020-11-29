@@ -19,3 +19,11 @@
 .smb*
 
 Play*
+.bash_logout
+.bashrc
+.lesshst
+.odbc.ini
+.profile
+.pulse-cookie
+.yarnrc
+.zcomp*

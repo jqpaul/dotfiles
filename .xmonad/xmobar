@@ -1,5 +1,5 @@
 Config
-   { font = "xft:SourceCodePro:size=13:antialias=true"
+   { font = "xft:SourceCodePro:size=13:antialias=true,TakaoPMincho,FontAwesome"
    , additionalFonts = []        -- default: []
    , borderColor = "white"
    , border = NoBorder
