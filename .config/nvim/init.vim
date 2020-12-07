@@ -28,6 +28,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'vifm/vifm.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
+Plugin 'voldikss/vim-floaterm'
 call vundle#end()
 
 
@@ -89,13 +90,14 @@ map rg :Rg<CR>
 " Code formatter
 map <C-f> :Neoformat<CR>
 " Tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <F11> :TagbarToggle<CR>
 " Goyo
 map <leader>gg :Goyo<CR>
 " Markdown Preview
 map <leader>sx :set keymap=kana<CR>
 map <leader>sz :set keymap=""<CR>
-"nmap <C-m> <Plug>MarkdownPreviewToggle
+map <leader>xx :Rg
+" nmap <C-m> <Plug>MarkdownPreviewToggle
 xmap <Tab> <Plug>(coc-snippets-select)
 
 " === MAPPINGS FOR REGULAR USE === "
@@ -108,9 +110,9 @@ map <C-x> <ESC>:bn<CR>
 map <C-z> <ESC>:bp<CR>
 map <C-g> <ESC>:bd!<CR>
 " Bindings for terminal opening and closing
-map <C-q> <ESC>:14sp<CR>:ter<CR>
-tnoremap <ESC> <C-\><C-n>
-tnoremap <C-q> <C-\><C-n>:q<CR>
+" map <C-q> <ESC>:14sp<CR>:ter<CR>
+" tnoremap <ESC> <C-\><C-n>
+" tnoremap <C-q> <C-\><C-n>:q<CR>
 " Copy and Paste from system clipboard
 map <leader>c "+y
 map <leader>v "+p
@@ -154,6 +156,11 @@ let g:vimwiki_list = [{
 					 \ 'path': '/mnt/jonah/Docs/VimMd',
 					 \ 'syntax': 'markdown',
 					 \ 'ext': '.md'}]
+" Floatterm
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F10>'
 " Nerdtree
 let NERDTreeShowHidden=1
 " Status bar
@@ -181,6 +188,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 " fzf
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o -type f -print -o -type l -print 2> /dev/null"
 let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit',
+  \ 'ctrl-o': ':r !echo',
+  \ }
 
 " === COC === "
 " Close preview window after completion is done

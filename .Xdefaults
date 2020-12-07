@@ -1,9 +1,9 @@
 URxvt.saveLines: 1000
 URxvt.scrollBar: false
-URxvt.foreground: white
-URxvt.background: black
+!URxvt.foreground: white
+!URxvt.background: black
 URxvt.secondaryScroll: true
-URxvt.font: xft:Monospace:pixelsize=14,xft:Inconsolata\ for\ Powerline:pixelsize=14,otf:PowerlineSymbols:pixelsize=14
+URxvt.font: xft:Source Code Pro:size=11.5,xft:Inconsolata\ for\ Powerline:pixelsize=12,otf:PowerlineSymbols:pixelsize=12
 URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1

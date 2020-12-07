@@ -83,7 +83,8 @@ ZSH_THEME="bureau"
 plugins=(
 	zsh-autosuggestions
 	fzf
-	cp
+	cp 
+	zsh-syntax-highlighting
 )
 
 
@@ -115,6 +116,22 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+
+rzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
 
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases

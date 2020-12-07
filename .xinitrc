@@ -1,4 +1,6 @@
 redshift -l 52.382:9.736 -t 6000:4000 &
+greenclip daemon &
+xrdb -merge ~/.Xresources
 xset s off
 unclutter &
 fcitx -d -r

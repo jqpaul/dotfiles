@@ -7,6 +7,7 @@ alias oldvim="/usr/bin/vim"
 alias nohist="unset HISTFILE"
 alias yeshist="export HISTFILE=/home/joe/.zsh_history"
 
+#Use 'yay' to update system
 if ! command -v "yay -v" &> /dev/null
 then
 	alias yay="sudo apt update && sudo apt upgrade"
@@ -31,15 +32,18 @@ code() {
 gco() {
 	git commit -am $1
 }
+
+alias "gpush"="git push"
+alias "glo"="git log --decorate --oneline --all"
+alias "gdf"="git diff"
+
+#Copy/Move with progress bar
 cop() {
 	rsync -ah --progress $1 $2
 }
 mov() {
 	rsync -ah --progress --remove-source-files $1 $2
 }
-alias "gpush"="git push"
-alias "glo"="git log --decorate --oneline --all"
-alias "gdf"="git diff"
 
 alias reboot="systemctl reboot"
 alias shutdown="systemctl shutdown"

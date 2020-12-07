@@ -44,7 +44,7 @@ import System.IO
 import System.Exit
 
 myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
-                  NS "ffplay" "ffplay rtsp://paul:m4vr7gLG3@hFBpM7@192.168.178.46:554" (resource =? "ffplay") (customFloating $ W.RationalRect (1/4) (1/6) (1/2) (2/3)),
+                  NS "ffplay" "ffplay rtsp://paul:m4vr7gLG3@hFBpM7@192.168.178.46:554" (resource =? "ffplay") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.48)),
                   NS "zeal" "zeal" (resource =? "zeal") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
                   NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.976)),
                   NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
@@ -100,7 +100,7 @@ main = do
       -- Applications --
       ((mod1Mask, xK_d), spawn "rofi -show run"),
       ((mod1Mask .|. controlMask, xK_d), spawn "sudo rofi -show run"),
-      ((mod1Mask, xK_c), spawn "rofi -modi clipboard:greenclip print -show clipboard"),
+      ((mod1Mask, xK_c), spawn "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"),
       ((mod1Mask, xK_b), spawn "alacritty -e vifm"),
 
       -- Navigation --
