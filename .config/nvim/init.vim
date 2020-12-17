@@ -5,7 +5,6 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin("~/.config/nvim/bundle")
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-"Plugin 'tyru/eskk.vim', { 'branch': 'neovim' }
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'preservim/nerdtree'
@@ -71,12 +70,13 @@ let &path.="/lib/modules/5.8.14-arch1-1/build/include"
 
 
 " === COLORSCHEME SETTINGS === "
-set t_Co=256   " This is may or may not needed.
+set t_Co=256   " This may be needed.
 " set background=light
 " colorscheme PaperColor
 
-colorscheme gruvbox
-"colorscheme preto
+"colorscheme gruvbox
+colorscheme preto
+"colorscheme PaperColor
 call togglebg#map("<F5>")
 
 
@@ -85,6 +85,7 @@ call togglebg#map("<F5>")
 map <C-n> :NERDTreeToggle<CR>
 " fzf
 map <C-a> :Files<CR>
+map <F2> :Files /mnt/jonah/Docs/VimMd/<CR>
 map <C-b> :Buffers<CR>
 map rg :Rg<CR>
 " Code formatter
@@ -117,7 +118,8 @@ map <C-g> <ESC>:bd!<CR>
 map <leader>c "+y
 map <leader>v "+p
 " Stop highlighting after ESC
-nnoremap <ESC> <C-c>:noh<CR>:w<CR>
+nnoremap <ESC> <C-c>:noh<CR>
+nnoremap <C-c> <ESC>:noh<CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 " escape on jk

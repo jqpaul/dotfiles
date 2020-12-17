@@ -3,6 +3,7 @@ import XMonad.Actions.CycleWS
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.StackSet as W
@@ -67,7 +68,7 @@ myManageHook = composeAll
 
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/joe/.xmonad/xmobar"
-    xmonad $ def {
+    xmonad $ ewmh def {
 	manageHook = myManageHook,
     layoutHook = avoidStruts  $  layoutHook def,
     handleEventHook = handleEventHook def <+> docksEventHook,
