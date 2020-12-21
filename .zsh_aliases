@@ -1,8 +1,12 @@
 alias sus="systemctl suspend"
 alias pacman="sudo pacman"
 alias apt="sudo apt"
+
 alias vim="/usr/bin/nvim"
 alias oldvim="/usr/bin/vim"
+
+alias vifm="/usr/bin/vifmrun"
+alias oldvifm="/usr/bin/vifm"
 
 alias nohist="unset HISTFILE"
 alias yeshist="export HISTFILE=/home/joe/.zsh_history"

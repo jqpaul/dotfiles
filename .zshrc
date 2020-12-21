@@ -3,7 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joe/.oh-my-zsh"
-export GOPATH="/usr/local/go"
+export GOROOT="/usr/local/go"
+export GOPATH="/home/joe/Programming/go"
 export DISPLAY=:0
 export FZF_BASE="$HOME/.config/nvim/bundle/fzf/shell"
 
@@ -144,6 +145,7 @@ export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.pyenv/bin
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/Programming/go/bin
 
 #eval "$(pyenv init -)"
 

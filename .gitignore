@@ -29,3 +29,5 @@ Play*
 .zcomp*
 .Xauthority
 .xsession-errors
+
+.config/vifm/vifminfo

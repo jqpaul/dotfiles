@@ -170,6 +170,7 @@ let g:airline#extensions#tabline#enabled = 1
 " let g:airline_theme='base16'
 let g:airline_theme='tomorrow'
 let g:airline#extendiond#tabline#formatter = 'jsformatter'
+let g:airline_powerline_fonts = 1
 " Snippets
 let g:UltiSnipsExpandTrigger="<C-l><C-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
