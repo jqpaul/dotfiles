@@ -26,7 +26,7 @@ Plugin 'sirver/UltiSnips'
 Plugin 'honza/vim-snippets'
 Plugin 'vifm/vifm.vim'
 Plugin 'junegunn/goyo.vim'
-Plugin 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
+Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plugin 'voldikss/vim-floaterm'
 call vundle#end()
 
