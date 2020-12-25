@@ -31,3 +31,8 @@ Play*
 .xsession-errors
 
 .config/vifm/vifminfo
+.ICEauthority
+.bash_profile
+.fzf*
+.nvimlog
+.zshrc.pre*
