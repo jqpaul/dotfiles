@@ -266,7 +266,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
-autocmd CursorMovedI * if pumvisible() == 0|:call coc#float#close_all()|endif
+" autocmd CursorMovedI * if pumvisible() == 0|:call coc#float#close_all()|endif
 " autocmd CursorMovedI * if pumvisible() == 0|:call coc#util#float_hide()|endif
-autocmd InsertLeave * if pumvisible() == 0|:call coc#float#close_all()|endif
+" autocmd InsertLeave * if pumvisible() == 0|:call coc#float#close_all()|endif
 " autocmd InsertLeave * if pumvisible() == 0|:call coc#util#float_hide()|endif

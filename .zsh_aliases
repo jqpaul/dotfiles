@@ -2,7 +2,11 @@ alias sus="systemctl suspend"
 alias pacman="sudo pacman"
 alias apt="sudo apt"
 
-alias vim="/usr/bin/nvim"
+if [ -f /usr/bin/nvim ]; then
+	alias vim="/usr/bin/nvim"
+else
+	alias vim="/var/lib/snapd/snap/bin/nvim"
+fi
 alias oldvim="/usr/bin/vim"
 
 alias vifm="/usr/bin/vifmrun"
