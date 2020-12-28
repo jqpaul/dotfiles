@@ -101,11 +101,11 @@ scrolling:
 # Font configuration (changes require restart)
 font:
   normal:
-    family: Source Code Pro
+    family: SauceCodePro Nerd Font
   italic:
-    family: Source Code Pro
+    family: SauceCodePro Nerd Font
   bold:
-    family: Source Code Pro
+    family: SauceCodePro Nerd Font
   # Normal (roman) font face
   #normal:
     # Font family

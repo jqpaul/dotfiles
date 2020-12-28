@@ -167,8 +167,8 @@ let g:floaterm_keymap_toggle = '<F10>'
 let NERDTreeShowHidden=1
 " Status bar
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='base16'
-let g:airline_theme='tomorrow'
+let g:airline_theme='base16'
+" let g:airline_theme='tomorrow'
 let g:airline#extendiond#tabline#formatter = 'jsformatter'
 let g:airline_powerline_fonts = 1
 " Snippets

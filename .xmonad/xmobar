@@ -1,5 +1,5 @@
 Config
-   { font = "xft:SourceCodePro:size=13:antialias=true,TakaoPMincho,FontAwesome"
+   { font = "xft:SauceCodePro Nerd Font:size=13:antialias=true,TakaoPMincho,FontAwesome"
    , additionalFonts = []        -- default: []
    , borderColor = "white"
    , border = NoBorder

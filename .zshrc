@@ -8,6 +8,10 @@ export GOPATH="/home/joe/Programming/go"
 export DISPLAY=:0
 export FZF_BASE="$HOME/.config/nvim/bundle/fzf/shell"
 
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+
 export GTK_THEME=Adwaita:dark
 
 setopt APPEND_HISTORY # Don't erase history
