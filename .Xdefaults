@@ -3,7 +3,7 @@ URxvt.scrollBar: false
 !URxvt.foreground: white
 !URxvt.background: black
 URxvt.secondaryScroll: true
-URxvt.font: xft:SauceCodePro Nerd Font:size=11.5,xft:Inconsolata for Powerline:pixelsize=12,otf:PowerlineSymbols:pixelsize=12
+URxvt.font: xft:SauceCodePro Nerd Font:size=12
 !URxvt.font: xft:Source Code Pro:size=11.5,xft:Inconsolata for Powerline:pixelsize=12,otf:PowerlineSymbols:pixelsize=12
 URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: firefox

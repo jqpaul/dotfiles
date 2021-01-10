@@ -1,34 +1,37 @@
 let s:data_dir = $HOME . '/.local/share/nvim'
 
 " === VUNDLE PLUGINS === "
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin("~/.config/nvim/bundle")
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
-Plugin 'preservim/nerdtree'
-Plugin 'mhinz/vim-startify'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vimwiki/vimwiki'
-Plugin 'majutsushi/tagbar'
-Plugin 'sbdchd/neoformat'
-Plugin 'joshdick/onedark.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'tpope/vim-obsession'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'sirver/UltiSnips'
-Plugin 'honza/vim-snippets'
-Plugin 'vifm/vifm.vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plugin 'voldikss/vim-floaterm'
-call vundle#end()
+" set rtp+=~/.config/nvim/bundle/Vundle.vim
+" call vundle#begin("~/.config/nvim/bundle")
+call plug#begin()
+" Plugin 'VundleVim/Vundle.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'mhinz/vim-startify'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vimwiki/vimwiki'
+Plug 'majutsushi/tagbar'
+Plug 'sbdchd/neoformat'
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'tpope/vim-obsession'
+Plug 'easymotion/vim-easymotion'
+Plug 'sirver/UltiSnips'
+Plug 'honza/vim-snippets'
+Plug 'junegunn/goyo.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'voldikss/vim-floaterm'
+Plug 'simeji/winresizer'
+Plug 'ryanoasis/vim-devicons'
+call plug#end()
+" call vundle#end()
 
 
 " === MISC SETTINGS === "
@@ -100,6 +103,9 @@ map <leader>sz :set keymap=""<CR>
 map <leader>xx :Rg
 " nmap <C-m> <Plug>MarkdownPreviewToggle
 xmap <Tab> <Plug>(coc-snippets-select)
+" WinResizer
+let g:winresizer_start_key = '<C-M>'
+
 
 " === MAPPINGS FOR REGULAR USE === "
 map Q <nop>
@@ -120,10 +126,13 @@ map <leader>v "+p
 " Stop highlighting after ESC
 nnoremap <ESC> <C-c>:noh<CR>
 nnoremap <C-c> <ESC>:noh<CR>
+nnoremap <Space> <ESC>:Buffers<CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
-" escape on jk
-inoremap jj <esc>
+" escape on jj, kj, jk
+" inoremap jj <esc>
+" inoremap kj <esc>
+" inoremap jk <esc>
 
 " === LESS RAGE === "
 command WQ wq
@@ -149,6 +158,8 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+imap <ESC> <nop>
+
 
 " === SETTINGS FOR PLUGINS === "
 " CoC
@@ -167,7 +178,7 @@ let g:floaterm_keymap_toggle = '<F10>'
 let NERDTreeShowHidden=1
 " Status bar
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='base16'
+let g:airline_theme='atomic'
 " let g:airline_theme='tomorrow'
 let g:airline#extendiond#tabline#formatter = 'jsformatter'
 let g:airline_powerline_fonts = 1

@@ -47,6 +47,7 @@ import System.Exit
 myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
                   NS "ffplay" "ffplay rtsp://paul:m4vr7gLG3@hFBpM7@192.168.178.46:554" (resource =? "ffplay") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.48)),
                   NS "zeal" "zeal" (resource =? "zeal") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
+                  NS "Picture-in-Picture" "Picture-in-Picture" (title =? "Picture-in-Picture") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
                   NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.976)),
                   NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
                   NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
@@ -94,6 +95,7 @@ main = do
       ((mod1Mask, xK_i), namedScratchpadAction myScratchPads "ffplay"),
       ((mod1Mask, xK_u), namedScratchpadAction myScratchPads "htop"),
       ((mod1Mask, xK_s), namedScratchpadAction myScratchPads "zeal"),
+      ((mod1Mask, xK_a), namedScratchpadAction myScratchPads "Picture-in-Picture"),
       ((mod1Mask, xK_n), namedScratchpadAction myScratchPads "evince"),
       ((mod1Mask, xK_m), namedScratchpadAction myScratchPads "zathura"),
       ((mod1Mask .|. shiftMask, xK_Return), spawn "urxvt"),
@@ -117,6 +119,7 @@ main = do
       ((shiftMask .|. controlMask, xK_comma), spawn "playerctl next"),
       ((shiftMask .|. controlMask, xK_Down), spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%"),
       ((shiftMask .|. controlMask, xK_Up), spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%"),
+      ((shiftMask .|. controlMask, xK_space), spawn "~/Programming/Python/lock/lock.sh"),
 
 	  -- Utils --
       ((mod1Mask .|. shiftMask, xK_p), spawn "~/.xmonad/resources/xkb.sh"),

@@ -2,6 +2,7 @@ alias sus="systemctl suspend"
 alias pacman="sudo pacman"
 alias apt="sudo apt"
 
+# Use neovim as standard
 if [ -f /usr/bin/nvim ]; then
 	alias vim="/usr/bin/nvim"
 else
@@ -9,18 +10,21 @@ else
 fi
 alias oldvim="/usr/bin/vim"
 
+# Use vifm with image preview
 alias vifm="/usr/bin/vifmrun"
 alias oldvifm="/usr/bin/vifm"
 
+# Use/Don't use $HISTFILE
 alias nohist="unset HISTFILE"
 alias yeshist="export HISTFILE=/home/joe/.zsh_history"
 
-#Use 'yay' to update system
+# Use 'yay' to update system
 if ! command -v "yay -v" &> /dev/null
 then
 	alias yay="sudo apt update && sudo apt upgrade"
 fi
 
+# Better file lists
 if ! command -v "exa" &> /dev/null
 then
 	alias ll="ls -l"
@@ -53,9 +57,15 @@ mov() {
 	rsync -ah --progress --remove-source-files $1 $2
 }
 
+# Show last X videos from sec.Camera
 cam() {
 	ls /mnt/cam/*/record/* -tr | tail -n $1 | xargs mpv
 }
 
+# System shutdown/reboot
 alias reboot="systemctl reboot"
 alias shutdown="systemctl shutdown"
+
+# Bluetooth Aliases
+alias arpd="sudo bluetoothctl connect A8:91:3D:13:B3:60"
+alias arpp="sudo bluetoothctl connect E4:90:FD:82:65:3E"

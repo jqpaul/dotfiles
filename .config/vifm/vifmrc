@@ -392,7 +392,10 @@ filextype */
         \ {View in thunar}
         \ Thunar %f &,
 
-fileviewer *.go,*.c,*.cpp*.h*.rs,*.py,*.sh,*.java highlight -O xterm256 -s dante %c
+fileviewer *.go,*.c,*.cpp,*.h,*.rs,*.py,*.sh,*.java,
+		\*.cc,*.cmake,*.d,*.el,*.f,*.fish,
+		\*.hpp,*.js
+		\ highlight -O xterm256 -s dante %c
 
 
 " Syntax highlighting in preview
