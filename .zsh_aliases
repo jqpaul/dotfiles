@@ -56,6 +56,9 @@ cop() {
 mov() {
 	rsync -ah --progress --remove-source-files $1 $2
 }
+fnd() {
+	find . -iname "*$1*"
+}
 
 # Show last X videos from sec.Camera
 cam() {

@@ -17,7 +17,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'majutsushi/tagbar'
-Plug 'sbdchd/neoformat'
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
@@ -91,8 +90,7 @@ map <C-a> :Files<CR>
 map <F2> :Files /mnt/jonah/Docs/VimMd/<CR>
 map <C-b> :Buffers<CR>
 map rg :Rg<CR>
-" Code formatter
-map <C-f> :Neoformat<CR>
+" map <leader>xx :Rg<CR>
 " Tagbar
 nmap <F11> :TagbarToggle<CR>
 " Goyo
@@ -100,7 +98,6 @@ map <leader>gg :Goyo<CR>
 " Markdown Preview
 map <leader>sx :set keymap=kana<CR>
 map <leader>sz :set keymap=""<CR>
-map <leader>xx :Rg
 " nmap <C-m> <Plug>MarkdownPreviewToggle
 xmap <Tab> <Plug>(coc-snippets-select)
 " WinResizer

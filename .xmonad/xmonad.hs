@@ -45,10 +45,11 @@ import System.IO
 import System.Exit
 
 myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
-                  NS "ffplay" "ffplay rtsp://paul:m4vr7gLG3@hFBpM7@192.168.178.46:554" (resource =? "ffplay") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.48)),
+                  NS "ffplay" "ffplay rtsp://paul:m4vr7gLG3@hFBpM7@192.168.178.46:554" (resource =? "ffplay") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.49)),
                   NS "zeal" "zeal" (resource =? "zeal") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
                   NS "Picture-in-Picture" "Picture-in-Picture" (title =? "Picture-in-Picture") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
-                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.976)),
+                  NS "Telegram" "Telegram" (title =? "Telegram") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
+                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (1.0)),
                   NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
                   NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
     where
@@ -68,16 +69,16 @@ myManageHook = composeAll
     ] <+> namedScratchpadManageHook myScratchPads
 
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/joe/.xmonad/xmobar"
+    -- xmproc <- spawnPipe "/usr/bin/xmobar /home/joe/.xmonad/xmobar"
     xmonad $ ewmh def {
 	manageHook = myManageHook,
     layoutHook = avoidStruts  $  layoutHook def,
     handleEventHook = handleEventHook def <+> docksEventHook,
     startupHook = xmonadStartupHook,
-    logHook = dynamicLogWithPP xmobarPP
-        { ppOutput = hPutStrLn xmproc,
-          ppTitle = xmobarColor "green" "" . shorten 50
-        },
+    -- logHook = dynamicLogWithPP xmobarPP
+    --     { ppOutput = hPutStrLn xmproc,
+    --       ppTitle = xmobarColor "green" "" . shorten 50
+    --     },
     borderWidth        = 0,
     terminal         = "alacritty",
     normalBorderColor  = "#000000",
@@ -94,9 +95,9 @@ main = do
       ((mod1Mask, xK_Return), spawn "alacritty"),
       ((mod1Mask, xK_i), namedScratchpadAction myScratchPads "ffplay"),
       ((mod1Mask, xK_u), namedScratchpadAction myScratchPads "htop"),
-      ((mod1Mask, xK_s), namedScratchpadAction myScratchPads "zeal"),
+      ((mod1Mask, xK_s), namedScratchpadAction myScratchPads "Telegram"),
       ((mod1Mask, xK_a), namedScratchpadAction myScratchPads "Picture-in-Picture"),
-      ((mod1Mask, xK_n), namedScratchpadAction myScratchPads "evince"),
+      ((mod1Mask, xK_n), namedScratchpadAction myScratchPads "alacritty"),
       ((mod1Mask, xK_m), namedScratchpadAction myScratchPads "zathura"),
       ((mod1Mask .|. shiftMask, xK_Return), spawn "urxvt"),
 

@@ -8,6 +8,9 @@ export GOPATH="/home/joe/Programming/go"
 export DISPLAY=:0
 export FZF_BASE="$HOME/.config/nvim/plugged/fzf/shell"
 
+export JAVA_HOME="/opt/jdk-11.0.9"
+export JDK_HOME="/opt/jdk-11.0.9"
+
 export GTK_THEME=Adwaita:dark
 
 setopt APPEND_HISTORY # Don't erase history

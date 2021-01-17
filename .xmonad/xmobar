@@ -32,8 +32,8 @@ Config
          ] 10
       , Run Date "<fc=#ee9a00>%a %0d-%m-%Y %H:%M:%S</fc>" "date" 10
       , Run Com "bash" ["-c", "~/.xmonad/resources/spotify.sh"] "bash1" 20
-      , Run Com "bash" ["-c", "~/.xmonad/resources/get_current_layout.sh"] "bash2" 5
-      , Run Com "bash" ["-c", "~/.xmonad/resources/get_volume.sh"] "bash3" 5
+      , Run Com "bash" ["-c", "~/.xmonad/resources/get_current_layout.sh"] "bash2" 1
+      , Run Com "bash" ["-c", "~/.xmonad/resources/get_volume.sh"] "bash3" 1
       , Run Com "uname" ["-s","-r"] "" 0
       , Run DynNetwork
          [ "-t", "<icon=network-icon_24.xpm/> <icon=actions-arrow-down-icon_24.xpm/><rx>KB <icon=actions-arrow-up-icon_24.xpm/><tx>KB"
