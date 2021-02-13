@@ -25,7 +25,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/goyo.vim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'voldikss/vim-floaterm'
 Plug 'simeji/winresizer'
 Plug 'ryanoasis/vim-devicons'
@@ -69,6 +69,8 @@ filetype plugin indent on
 syntax on
 " Add linux header files to path for 'gf' to open files
 let &path.="/lib/modules/5.8.14-arch1-1/build/include"
+" Display italics correctly in xterm
+highlight Comment cterm=italic 
 
 
 " === COLORSCHEME SETTINGS === "
@@ -134,6 +136,7 @@ cmap w!! w !sudo tee > /dev/null %
 " === LESS RAGE === "
 command WQ wq
 command Wq wq
+command Wa wa
 command W w
 command Q q
 

@@ -141,6 +141,8 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+export BOOKS="/mnt/jonah/Docs/Bücher"
+
 export PRG="/home/joe/Programming"
 export EDITOR=nvim
 export PATH=$PATH:~/.cargo/bin

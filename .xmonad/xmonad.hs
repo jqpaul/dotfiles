@@ -48,7 +48,7 @@ myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (cust
                   NS "ffplay" "ffplay rtsp://paul:m4vr7gLG3@hFBpM7@192.168.178.46:554" (resource =? "ffplay") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.49)),
                   NS "zeal" "zeal" (resource =? "zeal") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
                   NS "Picture-in-Picture" "Picture-in-Picture" (title =? "Picture-in-Picture") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
-                  NS "Telegram" "Telegram" (title =? "Telegram") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
+                  NS "Telegram" "Telegram" (resource =? "Telegram") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
                   NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (1.0)),
                   NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
                   NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
@@ -61,7 +61,7 @@ myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (cust
                  l = 0.95 -w
 
 xmonadStartupHook = do
-    spawn "sh /home/joe/Programming/bin/bg.sh 13 10"
+    spawn "sh /home/joe/Programming/bin/bg.sh 34 10"
 
 myManageHook = composeAll
     [ className =? "Picture-in-Picture" --> doCenterFloat
@@ -79,7 +79,7 @@ main = do
     --     { ppOutput = hPutStrLn xmproc,
     --       ppTitle = xmobarColor "green" "" . shorten 50
     --     },
-    borderWidth        = 0,
+    borderWidth        = 1,
     terminal         = "alacritty",
     normalBorderColor  = "#000000",
     focusedBorderColor = "#3f3f3f"

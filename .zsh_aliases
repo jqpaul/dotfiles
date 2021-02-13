@@ -60,9 +60,14 @@ fnd() {
 	find . -iname "*$1*"
 }
 
-# Show last X videos from sec.Camera
+# Show last x videos from sec.Camera
 cam() {
-	ls /mnt/cam/*/record/* -tr | tail -n $1 | xargs mpv
+	DIR=`ls -d /mnt/cam/*/record | tail -n 1`
+	pushd "${DIR}"
+	ls -tr * | tail -n $1 | xargs mpv 
+	# ls -tr * | tail -n $1 | xargs mpv "${DIR}"/"{}"
+	# ls -d */record | tail -n 5 | xargs ls -tr | tail -n $1 | xargs mpv
+	popd
 }
 
 # System shutdown/reboot
@@ -70,5 +75,9 @@ alias reboot="systemctl reboot"
 alias shutdown="systemctl shutdown"
 
 # Bluetooth Aliases
+alias disc="sudo bluetoothctl disconnect"
 alias arpd="sudo bluetoothctl connect A8:91:3D:13:B3:60"
 alias arpp="sudo bluetoothctl connect E4:90:FD:82:65:3E"
+
+# Miscellenious
+alias kkill="ps aux | fzf | awk '{print \$2}' | xargs kill -9"
