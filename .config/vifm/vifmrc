@@ -394,7 +394,7 @@ filextype */
 
 fileviewer *.go,*.c,*.cpp,*.h,*.rs,*.py,*.sh,*.java,
 		\*.cc,*.cmake,*.d,*.el,*.f,*.fish,
-		\*.hpp,*.js
+		\*.hpp,*.js,*.json,*.xml,*.r
 		\ highlight -O xterm256 -s dante %c
 
 

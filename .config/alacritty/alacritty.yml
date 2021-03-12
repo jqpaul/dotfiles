@@ -187,7 +187,7 @@ colors:
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0xd8d8d8'
-    cursor: '0xd8d8d8'
+    cursor: '0x080808'
 
   # Normal colors
   normal:
@@ -318,7 +318,7 @@ mouse:
   triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  hide_when_typing: false
+  hide_when_typing: true
 
   url:
     # URL launcher
@@ -356,7 +356,7 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Block
+  style: Underline
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.

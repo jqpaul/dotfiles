@@ -1,3 +1,4 @@
+#!/usr/bin/sh
 xinput --set-prop 14 "Coordinate Transformation Matrix" 6 0 0 0 6 0 0 0 1
 xinput --set-prop 14 "libinput Accel Speed" -1
 

@@ -72,6 +72,8 @@ let &path.="/lib/modules/5.8.14-arch1-1/build/include"
 " Display italics correctly in xterm
 highlight Comment cterm=italic 
 
+set cul!
+
 
 " === COLORSCHEME SETTINGS === "
 set t_Co=256   " This may be needed.
@@ -157,8 +159,6 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
-
-imap <ESC> <nop>
 
 
 " === SETTINGS FOR PLUGINS === "
