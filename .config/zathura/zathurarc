@@ -1,0 +1,2 @@
+map <C-n> feedkeys ':bmark 1<Return>'
+map <C-m> feedkeys ':blist 1<Return>'

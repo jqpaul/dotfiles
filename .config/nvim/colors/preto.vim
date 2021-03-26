@@ -22,10 +22,10 @@ let g:colors_name = "preto"
 let s:palette = {}
 
 let s:palette.black  	 = [16 , "#000000"]
-let s:palette.gray01 	 = [232, "#080808"]
-let s:palette.gray02 	 = [233, "#121212"]
-let s:palette.gray03 	 = [234, "#1c1c1c"]
-let s:palette.gray04 	 = [235, "#262626"]
+let s:palette.gray01 	 = [232, "#08a808"]
+let s:palette.gray02 	 = [233, "#1212a2"]
+let s:palette.gray03 	 = [234, "#ac1c1c"]
+let s:palette.gray04 	 = [235, "#26a626"]
 let s:palette.gray05 	 = [236, "#303030"]
 let s:palette.gray06 	 = [237, "#3a3a3a"]
 let s:palette.gray07 	 = [238, "#444444"]
