@@ -1,30 +1,35 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+PROMPT='%n in %~ -> '
+
+HISTFILE=~/.histfile
+HISTSIZE=100000
+SAVEHIST=100000
+HISTTIMEFORMAT="[%F %T]"
+setopt appendhistory
+setopt incappendhistory
+setopt sharehistory
+setopt EXTENDED_HISTORY
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/joe/.oh-my-zsh"
-export GOROOT="/usr/local/go"
-export GOPATH="/home/joe/Programming/go"
-export DISPLAY=:0
-export FZF_BASE="$HOME/.config/nvim/plugged/fzf/shell"
 
-export JAVA_HOME="/opt/jdk-11.0.9"
-export JDK_HOME="/opt/jdk-11.0.9"
+# export JAVA_HOME="/opt/jdk-11.0.9"
+# export JDK_HOME="/opt/jdk-11.0.9"
+# 
+# export GTK_THEME=Adwaita:dark
 
-export GTK_THEME=Adwaita:dark
-
-setopt APPEND_HISTORY # Don't erase history
-setopt EXTENDED_HISTORY # Add additional data to history like timestamp
-setopt INC_APPEND_HISTORY # Add immediately
-setopt HIST_FIND_NO_DUPS # Don't show duplicates in search
-setopt NO_HIST_BEEP # Don't beep
-setopt SHARE_HISTORY # Share history between session/terminals
+# setopt APPEND_HISTORY # Don't erase history
+# setopt EXTENDED_HISTORY # Add additional data to history like timestamp
+# setopt INC_APPEND_HISTORY # Add immediately
+# setopt HIST_FIND_NO_DUPS # Don't show duplicates in search
+# setopt NO_HIST_BEEP # Don't beep
+# setopt SHARE_HISTORY # Share history between session/terminals
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bureau"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -58,7 +63,7 @@ ZSH_THEME="bureau"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -84,15 +89,14 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	zsh-autosuggestions
-	fzf
-	cp 
-	zsh-syntax-highlighting
-)
+# plugins=(
+# 	zsh-autosuggestions
+# 	zsh-syntax-highlighting
+# )
 
+source /opt/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /opt/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
-source $ZSH/oh-my-zsh.sh
 # source ~/Documents/zsh/zsh-vim-mode.plugin.zsh
 
 # User configuration
@@ -121,7 +125,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+# compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 rzf() {
 	RG_PREFIX="rga --files-with-matches"
@@ -141,7 +145,10 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+export DISPLAY=:0
 export BOOKS="/mnt/jonah/Docs/Bücher"
+
+export GOPATH="~/.local/go"
 
 export PRG="/home/joe/Programming"
 export EDITOR=nvim

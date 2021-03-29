@@ -2,7 +2,7 @@
 # /home/joe/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Wed Nov  4 19:04:13 2020
+# Generated on Sat Mar 27 18:03:04 2021
 #
 
 # ConfigProperties:
@@ -13,9 +13,9 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = Yes
 UpdateRulesOnProfileNameChange = Yes
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Memory_Used_(GPU_0),Yes,3000
 
 # Attributes:
 

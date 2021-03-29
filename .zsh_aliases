@@ -19,10 +19,10 @@ alias nohist="unset HISTFILE"
 alias yeshist="export HISTFILE=/home/joe/.zsh_history"
 
 # Use 'yay' to update system
-if ! command -v "yay -v" &> /dev/null
-then
-	alias yay="sudo apt update && sudo apt upgrade"
-fi
+# if ! command -v "yay -v" &> /dev/null
+# then
+# 	alias yay="sudo apt update && sudo apt upgrade"
+# fi
 
 # Better file lists
 if ! command -v "exa" &> /dev/null

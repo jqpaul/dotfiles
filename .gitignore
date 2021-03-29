@@ -11,6 +11,7 @@
 .fehbg
 .xscreensaver
 .wget-hsts
+.histfile
 .xmonad/xmonad-x86_64-linux
 .xmonad/xmonad.errors
 .xmonad/xmonad.hi
