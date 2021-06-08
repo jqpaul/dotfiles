@@ -12,6 +12,10 @@ setopt incappendhistory
 setopt sharehistory
 setopt EXTENDED_HISTORY
 
+# Search through history with already entered
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
 # Path to your oh-my-zsh installation.
 
 # export JAVA_HOME="/opt/jdk-11.0.9"
@@ -96,6 +100,7 @@ ENABLE_CORRECTION="true"
 
 source /opt/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /opt/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source /opt/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # source ~/Documents/zsh/zsh-vim-mode.plugin.zsh
 
@@ -158,6 +163,7 @@ export PATH=$PATH:~/.pyenv/bin
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/Programming/go/bin
+export PATH=$PATH:~/.config/nvim/plugged/fzf/bin
 
 #eval "$(pyenv init -)"
 

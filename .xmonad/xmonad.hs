@@ -48,8 +48,8 @@ myScratchPads = [ NS "htop" "alacritty -t htop -e gotop" (title =? "htop") (cust
                   NS "ffplay" "ffplay rtsp://paul:m4vr7gLG3@hFBpM7@192.168.178.46:554" (resource =? "ffplay") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.49)),
                   NS "zeal" "zeal" (resource =? "zeal") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
                   NS "Picture-in-Picture" "Picture-in-Picture" (title =? "Picture-in-Picture") (customFloating $ W.RationalRect (0.62) (0.49) (0.381) (0.49)),
-                  NS "Telegram" "Telegram" (resource =? "Telegram") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
-                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.98)),
+                  NS "Telegram" "telegram-desktop" (resource =? "telegram-desktop") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)),
+                  NS "zathura" "zathura --data-dir=/home/joe/.local/share/zathura" (resource =? "org.pwmt.zathura") (customFloating $ W.RationalRect (0.62) (0) (0.381) (0.98)),
                   NS "evince" "evince" (resource =? "evince") (customFloating $ W.RationalRect (0.62) (0) (0.38) (0.976)),
                   NS "alacritty" "alacritty -t alacritty" (title =? "alacritty") manageTerm]
     where
@@ -76,9 +76,9 @@ main = do
     handleEventHook = handleEventHook def <+> docksEventHook,
     startupHook = xmonadStartupHook,
     -- logHook = dynamicLogWithPP xmobarPP
-    --     { ppOutput = hPutStrLn xmproc,
-    --       ppTitle = xmobarColor "green" "" . shorten 50
-    --     },
+    --    { ppOutput = hPutStrLn xmproc,
+    --      ppTitle = xmobarColor "green" "" . shorten 50
+    --    },
     borderWidth        = 1,
     terminal         = "alacritty",
     normalBorderColor  = "#000000",

@@ -10,6 +10,13 @@ else
 fi
 alias oldvim="/usr/bin/vim"
 
+# Use bat as standard
+if [ -f /usr/bin/bat ]; then
+	alias cat="/usr/bin/bat"
+fi
+alias oldcat="/usr/bin/cat"
+
+alias oldvim="/usr/bin/vim"
 # Use vifm with image preview
 alias vifm="/usr/bin/vifmrun"
 alias oldvifm="/usr/bin/vifm"
@@ -69,6 +76,12 @@ cam() {
 	# ls -d */record | tail -n 5 | xargs ls -tr | tail -n $1 | xargs mpv
 	popd
 }
+
+# Directory change
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # System shutdown/reboot
 alias reboot="systemctl reboot"

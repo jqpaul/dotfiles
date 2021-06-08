@@ -216,9 +216,13 @@ bindsym $mod+s [class="Telegram"] scratchpad show
 for_window [class="Telegram"] move scratchpad
 bindsym $mod+i [class="ffplay"] scratchpad show
 for_window [class="ffplay"] move scratchpad
+for_window [class="ffplay"] move position 1608 0, resize set 953px 520px
 bindsym $mod+n [class="alacritty"] scratchpad show
 bindsym $mod+m [instance="zathura"] scratchpad show
+for_window [instance="zathura"] move scratchpad
+for_window [instance="zathura"] move position 1607 0, resize set 953px 1035px
 
+for_window [title="Pavucontrol"] floating enable, resize set 800px 500px
 bindsym Mod1+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -231,12 +235,12 @@ default_border none
 default_floating_border none
 hide_edge_borders both
 
-bar {
-	font pango:Inconsolata 10
-	position bottom
-	tray_output none
-			status_command bumblebee-status -m network_traffic pasource memory cpu date time -p root.path=/ time.format="%H:%M:%S Uhr" date.format="%a, %d-%m-%Y" -t greyish-powerline
-}
+# bar {
+# 	font pango:Inconsolata 10
+# 	position bottom
+# 	tray_output none
+# 			status_command bumblebee-status -m network_traffic pasource memory cpu date time -p root.path=/ time.format="%H:%M:%S Uhr" date.format="%a, %d-%m-%Y" -t greyish-powerline
+# }
 
 exec_always ~/.fehbg
 

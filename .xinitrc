@@ -4,9 +4,11 @@ xrdb -merge ~/.Xresources
 xset s off
 xset s noblank
 xset -dpms
-sh ~/.xsessionrc
+# sh ~/.xsessionrc
 sh /home/joe/Programming/bin/bg.sh 34 10
-# unclutter &
-# fcitx -d -r
-# xsetroot -cursor_name left_ptr
-exec i3
+unclutter &
+fcitx -d -r
+xsetroot -cursor_name left_ptr
+mount -a
+# exec i3
+exec xmonad

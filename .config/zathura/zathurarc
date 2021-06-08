@@ -1,2 +1,4 @@
 map <C-n> feedkeys ':bmark 1<Return>'
 map <C-m> feedkeys ':blist 1<Return>'
+map <C-h> feedkeys ':bmark 2<Return>'
+map <C-j> feedkeys ':blist 2<Return>'

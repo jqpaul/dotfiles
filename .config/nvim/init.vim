@@ -71,9 +71,11 @@ syntax on
 let &path.="/lib/modules/5.8.14-arch1-1/build/include"
 " Display italics correctly in xterm
 highlight Comment cterm=italic 
-
 set cul!
 
+" === MACROS === "
+let @t='I- j'
+let @r='I€kb- :v€kbVimwikiChangeSymbolInListTo 1.j'
 
 " === COLORSCHEME SETTINGS === "
 set t_Co=256   " This may be needed.
@@ -88,7 +90,8 @@ call togglebg#map("<F5>")
 
 " === MAPPINGS FOR PLUGINS === "
 " Nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle .<CR>
+map <F3> :NERDTreeToggle /mnt/jonah/Docs/VimMd/<CR>
 " fzf
 map <C-a> :Files<CR>
 map <F2> :Files /mnt/jonah/Docs/VimMd/<CR>
@@ -200,6 +203,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 "    \}
 
 " fzf
+" rg --column --line-number --no-heading --color=always --smart-case -- ''
+" let $FZF_DEFAULT_COMMAND = 'rg --column --hidden --line-number --color=always'
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o -type f -print -o -type l -print 2> /dev/null"
 let $FZF_DEFAULT_OPTS=' --color=dark --layout=reverse'
 let g:fzf_action = {
