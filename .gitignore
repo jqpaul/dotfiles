@@ -33,6 +33,7 @@ Play*
 
 .config/vifm/vifminfo
 .ICEauthority
+.GA_ClientID
 .bash_profile
 .fzf*
 .nvimlog

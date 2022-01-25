@@ -4,3 +4,5 @@
 
 DISPLAY=:0 xset r rate 230 40
 
+xinput --set-prop 13 "Coordinate Transformation Matrix" 0.3 0 0 0 0.3 0 0 0 1
+

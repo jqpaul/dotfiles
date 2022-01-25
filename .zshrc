@@ -9,7 +9,7 @@ SAVEHIST=100000
 HISTTIMEFORMAT="[%F %T]"
 setopt appendhistory
 setopt incappendhistory
-setopt sharehistory
+# setopt sharehistory
 setopt EXTENDED_HISTORY
 
 # Search through history with already entered
@@ -153,7 +153,7 @@ fi
 export DISPLAY=:0
 export BOOKS="/mnt/jonah/Docs/Bücher"
 
-export GOPATH="~/.local/go"
+export GOPATH="/home/joe/.local/go"
 
 export PRG="/home/joe/Programming"
 export EDITOR=nvim

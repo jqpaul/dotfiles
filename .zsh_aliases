@@ -89,8 +89,10 @@ alias shutdown="systemctl shutdown"
 
 # Bluetooth Aliases
 alias disc="sudo bluetoothctl disconnect"
+alias rec="sudo bluetoothctl disconnect; sudo bluetoothctl connect A8:91:3D:13:B3:60"
 alias arpd="sudo bluetoothctl connect A8:91:3D:13:B3:60"
 alias arpp="sudo bluetoothctl connect E4:90:FD:82:65:3E"
+alias arp3="sudo bluetoothctl connect 9C:28:B3:BE:72:BC"
 
 # Miscellenious
 alias kkill="ps aux | fzf | awk '{print \$2}' | xargs kill -9"

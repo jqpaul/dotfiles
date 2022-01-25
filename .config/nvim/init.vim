@@ -64,6 +64,7 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 set ssop-=options
+set guifont=SauceyPro
 filetype plugin indent on
 " Syntax highlighting on
 syntax on
@@ -80,8 +81,10 @@ let @r='I€kb- :v€kbVimwikiChangeSymbolInListTo 1.j'
 " === COLORSCHEME SETTINGS === "
 set t_Co=256   " This may be needed.
 " set background=light
-" colorscheme PaperColor
-
+"colorscheme PaperColor
+"colorscheme zellner
+"colorscheme solarized
+"colorscheme onedark
 "colorscheme gruvbox
 colorscheme preto
 "colorscheme PaperColor
